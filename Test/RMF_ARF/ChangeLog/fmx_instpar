@@ -1,0 +1,36 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: instpar
+
+Add new entries here:
+
+
+100705v04 - 2017-09-05 (GLamer)
+--------------------------------
+
+tm5_instpar_100705v03.fits: 
+ Apply plate scale correction
+ calibration performed with  eroday=43104 data
+
+100705v03 - 2017-09-05 (GLamer)
+--------------------------------
+
+tm5_instpar_100705v03.fits: 
+  applied boresight correction to  TM5, 
+  calibration performed with  eroday=43104 data 
+  reference is  GYRO attitude transformed using gyro_boresight_170630v04.fits
+
+ 
+
+100705v02 - 2017-02-21 (GLamer)
+--------------------------------
+
+Nominal pre-flight values
+
+100705v01 - 2014-04-24 (GLamer)
+--------------------------------
+
+
+

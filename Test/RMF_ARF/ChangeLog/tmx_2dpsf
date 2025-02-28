@@ -1,0 +1,29 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: 2dpsf
+
+Add new entries here:
+
+190219v05 - 2020-05-04 (SF)
+--------------------------------
+PSF models removing the flux outside 4 arcmin radius, to be
+consistent with the vignetting for all 7 TMs
+from K. Dennerl / J. Sanders
+
+
+190219v04 - 2020-02-27 (SF)
+--------------------------------
+corrected Fe-K on-axis PSF for all 7 TMs
+from K. Dennerl / J. Sanders
+
+
+100215v02 - 2018-04-05 (creator)
+--------------------------------
+
+110705v01 - 2018-02-27 (creator) 
+--------------------------------
+
+
+

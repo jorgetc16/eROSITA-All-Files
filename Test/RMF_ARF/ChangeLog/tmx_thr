@@ -1,0 +1,13 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: thrmap
+
+Add new entries here:
+
+191001v01 - 2019-11-26 (SFriedrich)
+--------------------------------
+copy tmx_thr_191001.fits from /ero_archive/config/TMx_thr.fits
+set header keywords
+

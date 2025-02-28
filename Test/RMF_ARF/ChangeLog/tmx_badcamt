@@ -1,0 +1,806 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: badcamt
+
+
+Add new entries here:
+
+2022-02-14 badtimes tm7_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM7 on 13.02.2022 according to SF 
+
+2022-02-11 badtimes tm4_badcamt_190701v08.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM4 on 10.02.2022 according to SF
+
+2022-02-08 badtimes tm2_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM2 on 06.02.2022 according to SF
+
+2022-02-06 badtimes tm1_badcamt_190701v02.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM1 on 05.02.2022 according to SF
+
+2022-02-03 badtimes tm7_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM7 on 01.02.2022 according to SF 
+
+2022-01-31 badtimes tm6_badcamt_190701v06.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM6 on 29.01.2022 according to SF
+
+2022-01-31 badtimes tm1_badcamt_190701v02.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM1 on 28.01.2022 according to SF
+
+2022-01-25 badtimes tm5_badcamt_190701v04.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM5 on 24.01.2022 according to SF/RG 
+
+2022-01-21 badtimes tm7_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM7 on 20.01.2022 according to SF 
+
+2022-01-20 badtimes tm2_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM2 on 17-18.01.2022 according to SF
+
+2022-01-17 tm[1,2,3,4,5,6,7]_badcamt_190701v0[2,3,3,8,4,6,3].fits (SF)
+----------------------------------------
+additional badtimes added for all CEs on 14.01.2022 according to SF
+due to ITC reset on 14.01.2022
+
+2022-01-12 badtimes tm7_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for resets of TM7 on 06.01.2022 and 09.01.2022
+according to SF 
+
+2022-01-10 badtimes tm1_badcamt_190701v02.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM1 on 07.01.2022 according to SF
+
+2022-01-10 badtimes tm4_badcamt_190701v08.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM4 on 09.01.2022 according to SF
+
+2021-12-27 badtimes tm2_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM2 on 23.12.2021 according to SF
+
+2021-12-19 badtimes tm4_badcamt_190701v08.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM4 on 16.12.2021 according to SF
+
+2021-12-19 badtimes tm2_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM2 on 18.12.2021 according to SF
+
+2021-12-09 badtimes tm7_badcamt_190701v03.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM7 on 08.12.2021 and idle time 
+according to SF
+
+2021-12-07 badtimes tm5_badcamt_190701v04.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM5 on 04.12.2021 and idle time 
+according to SF (OAR-???)
+
+2021-12-01 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM7 on 28.11.2021
+according to SF (see OAR ??? (in prep))
+
+2021-11-26 tm[1,2,3,4,5,6,7]_badcamt_190701v0[2,3,3,8,4,6,3].fits (SF)
+----------------------------------------
+additional badtimes added for all CEs from 24.11. to 25.11.2021 according to SF
+due to orbit correction on 24.11.2021
+
+2021-11-23 badtimes tm1_badcamt_190701v02.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM1 on 22.11.2021 according to SF
+(OAR???)
+
+2021-11-19 badtimes tm6_badcamt_190701v06.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM6 on 18.11.2021 according to SF
+(OAR???)
+
+2021-11-18 badtimes tm1_badcamt_190701v02.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM1 on 16.11.2021 according to SF
+(OAR???)
+
+2021-11-12 badtimes tm5_badcamt_190701v04.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM5 on 11.11.2021 according to SF
+(OAR-153)
+
+2021-11-09 badtimes tm5_badcamt_190701v04.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM5 on 08.11.2021 according to SF
+(OAR???)
+
+2021-11-08 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM7 on 07.11.2021
+according to SF (see OAR ??? (in prep))
+
+2021-11-02 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM3 on 31.10.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM3_zip_pattern (in prep))
+
+2021-10-27 badtimes tm6_badcamt_190701v06.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM6 on 03.11.2021 according to SF
+(until recently missed reset in CalPV/eFEDS, only from PMIDLE to PMENV2)
+
+2021-10-26 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM7 on 25.10.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM7_? (in prep))
+
+2021-10-25 tm[1,2,3,4,5,6,7]_badcamt_190701v0[2,3,3,8,4,6,3].fits (SF)
+----------------------------------------
+additional badtime added for all CEs from 22.10. to 23.10.2021 according to SF
+due to ITC crash (eRO-MPE-OAR-60-???-Iss1_ITC_crash)
+
+2021-10-21 badtimes tm4_badcamt_190701v08.fits (SF)
+-------------------------------------------------------------
+.Change of BTI: two BTIs on 08/05/2021 summarized to one BTI, to exclude period of 
+7 minutes, in which new threshold map was in place, between periods, in which old threshold maps
+were still in place (can be changed when handling of threshold maps is established). 
+
+2021-10-15 badtimes tm6_badcamt_190701v06.fits (SF)
+-------------------------------------------------------------
+Additional badtimes for reset of TM6 on 13.10.2021 according to SF
+(OAR 147, from PMIDLE to PMENV2)
+
+2021-10-12 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM7 on 11.10.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM7_? (in prep))
+
+2021-10-11 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM3 on 10.10.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM3_zip_pattern (in prep))
+
+2021-10-11 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM2 on 10.10.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM2_zip_pattern (in prep))
+
+2021-10-11 badtimes tm4_badcamt_190701v07.fits (SF)
+----------------------------------------------------------
+Additional badtimes for reset of TM4 on 08.10.2021
+only time span of reset, because no malfunction, only module activation
+
+2021-09-29 badtimes tm4_badcamt_190701v07.fits (CM)
+----------------------------------------------------------
+Additional badtimes for reset of TM4 (OAR 141)
+
+2021-09-28 badtimes tm6_badcamt_190701v06.fits (CM)
+-------------------------------------------------------------
+Additional badtimes for reset of TM6 (OAR 142, MR & for 27.09.2021 from PMIDLE to PMENV2)
+
+2021-09-17 badtimes tm1_badcamt_190701v02.fits (CM)
+----------------------------------------------------------------
+Additional badtimes for reset of TM1 (PMIDLE to PMENV2)
+
+2021-09-10 badtimes tm6_badcamt_190701v06.fits (CM)
+-----------------------------------------
+additional badtimes for reset of TM6 on 10.09.21 according to MR (OAR 139)
+
+2021-09-12 badtimes added due to Orbit correction on 06.09.21 (CM)
+----------------------------------------
+tm1_badcamt_190701v02.fits,tm2_badcamt_190701v03.fits,
+tm3_badcamt_190701v03.fits,tm4_badcamt_190701v07.fits,tm4_badcamt_190701v07.fits,tm5_badcamt_190701v06.fits,tm6_badcamt_190701v06.fits,tm7_badcamt_190701v03.fits
+
+-----------------------------------------
+2021-09-02 tm2_badcamt_190701v03.fits (CM)
+------------------------------------------
+additional badtime added for reset of TM2 on 01.09.2021, OAR in prep (IS/DC)
+
+2021-09-02 tm6_badcamt_190701v06.fits (CM)
+------------------------------------------
+additional badtimes added for reset of TM6 on 01.09.2021, OAR in prep (IS/DC)
+
+2021-08-30 tm4_badcamt_190701v07.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM4 on 28.08.2021 according to SF
+
+2021-08-25 tm4_badcamt_190701v07.fits (SF)
+------------------------------------------
+additional badtimes added for the resets of TM4 on 28.07, 05.08, 08.08,
+11.08,12.08, and 18.08. according to SF
+(OAR-128, -132, -129, -130, -133 (in prep))
+
+2021-08-25 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM2 on 24.08.2021
+according to SF/MR (see eRO-MPE-OAR-60-???-Iss1_TM2_ (in prep))
+
+2021-08-23 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for the reset of TM5 
+on 21.08.2021 according to SF/MR
+(see eRO-MPE-OAR-60-135-Iss1_TM5_zip_pattern)
+
+2021-08-23 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for the resets and PMIDLE time of TM5 
+on 18.08.2021 to 19.8.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM5_ (in prep)))
+
+2021-08-17 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtimes added for the reset of TM3 on 16.08.2021
+according to SF (see eRO-MPE-OAR-60-131-Iss1_TM3_corrupted_image-right CAMEX)
+
+2021-08-17 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtimes added for the reset of TM3 on 11.08.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM3_ (in prep))
+
+2021-08-06 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 06.08.2021 according to SF/IS
+(see eRO-MPE-OAR-60-??-Iss1_TM5_ (in prep)))
+
+2021-08-02 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtimes added for the reset of TM2 on 01.08.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM2_ (in prep))
+
+2021-08-02 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtimes added for the reset of TM3 on 31.07.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM3_ (in prep))
+
+2021-07-26 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 23.07.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM5_ (in prep)))
+
+2021-07-12 tm[1,2,3,4,5,6,7]_badcamt_190701v0[2,3,3,6,4,6,3].fits (SF)
+------------------------------------------
+additional badtime added for all ECs from 06.07. to 09.07.2021 according to SF
+due to ITC crash (eRO-MPE-OAR-60-119-Iss1_ITC_crash)
+
+2021-07-05 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtimes added for the resets of TM4 on 16.07 according to SF
+(eRO-MPE-OAR-60-???-Iss1_TM4_ (in prep))
+
+2021-07-07 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 05.07.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM5_ (in prep)))
+
+2021-07-05 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtimes added for the resets of TM4 on 29.06 and 01.07.2021
+according to SF (see eRO-MPE-OAR-60-115-Iss1_TM4_emergency_mode and
+(eRO-MPE-OAR-60-???-Iss1_TM4_ (in prep))
+
+2021-07-05 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtimes added for the reset of TM2 on 29.06.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM2_ (in prep))
+
+2021-07-05 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtimes added for the reset of TM6 on 01.07.2021
+according to SF (see eRO-MPE-OAR-60-???-Iss1_TM6_ (in prep))
+
+2021-07-05 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtimes added for the resets of TM4 on 05.06 and 17.06.2021
+according to SF (see eRO-MPE-OAR-60-109-Iss1_TM4_zip_pattern and
+eRO-MPE-OAR-60-111-Iss1_TM4_zip_pattern)
+
+2021-06-21 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 27.06.2021 according to SF/MF
+(see eRO-MPE-OAR-60-??-Iss1_TM5_ (in prep)))
+
+2021-06-21 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM6 on 16.06.2021 according to SF
+(see eRO-MPE-OAR-60-112-Iss1_TM6_right_CAMEX_corruption)
+
+2021-06-21 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 15.06.2021 according to MR
+(see eRO-MPE-OAR-60-110-Iss1_TM5_CMXTGERROR.docx)
+
+2021-06-14 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for malfunction of TM1 on 11.06.2021
+according to SF (see eRO-MPE-OAR-60-?? (in prep))
+
+2021-06-11 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for malfunction of TM1 from 04.06 to 09.06.2021
+according to SF (see eRO-MPE-OAR-60-?? (in prep))
+
+2021-06-01 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM1 on 27.05.2021 according to MR
+(see eRO-MPE-OAR-60-107-Iss1_TM1_Increased_noise_on_MCMX)
+
+2021-05-21 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM6 on 21.05.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM6_ (in prep))
+
+2021-05-25 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM1 on 21.05.2021 according to SF
+(see eRO-MPE-OAR-60-106-Iss1_TM1_zip_pattern)
+
+2021-05-25 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM1 on 19.05.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM1_ (in prep))
+
+2021-05-17 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 15.05.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM5_ (in prep))
+
+2021-05-17 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM2 on 14.05.2021 according to SF/DC
+(see eRO-MPE-OAR-60-101-Iss1_TM2_zip_pattern)
+
+2021-05-10 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM4 on 01.05.2021 according to SF
+(see eRO-MPE-OAR-60-99-Iss1_TM4_no_science_telemetry_coming)
+
+2021-05-06 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM6 on 01.05.2021 according to SF
+(see eRO-MPE-OAR-60-100-Iss1_TM6_corrupt_image_and_zip_pattern)
+
+2021-05-06 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM2 on 01.05.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM2_ (in prep))
+
+2021-05-03 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM4 on 22.04.2021 according to SF
+(see eRO-MPE-OAR-60-94-Iss1_TM4__stopped_generating_events)
+
+2021-05-03 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM2 on 28.04.2021 according to SF
+(see eRO-MPE-OAR-60-??-Iss1_TM2_corrupt_register (in prep))
+
+2021-04-29 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM7 on 27.04.2021 according to SF
+(see eRO-MPE-OAR-60-96-Iss1_TM7_zip_pattern (in prep))
+
+2021-04-27 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM7 on 22.04.2021 according to SF
+(see eRO-MPE-OAR-60-95-Iss1_TM7_TG_error_after_offset_calculation (in prep))
+
+2021-04-18 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM4 on 18.04.2021 according to SF
+(see eRO-MPE-OAR-60-93-Iss1_TM4_offset_calc_CMX2_corruption (in prep)))
+
+2021-04-08 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM6 on 01.04.2021 according to SF
+(see eRO-MPE-OAR-60-91-Iss1_TM6_analog_houskeeping_malfunction)
+
+2021-04-05 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM3 on 02.04.2021 according to SF
+(see eRO-MPE-OAR-60-92-Iss1_TM3_corrupt_image_zip_pattern)
+
+2021-03-29 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM6 on 27.03.2021 according to MR
+(see eRO-MPE-OAR-60-90-Iss1_TM6_loss of telemetry and telecommand)
+
+2021-03-23 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM5 on 12.03.2021 according to SF
+(see eRO-MPE-OAR-60-89-Iss1_TM5_corrupted_register)
+
+2021-03-22 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for warmboot of TM3 on 19.03.2021 according to SF
+(see eRO-MPE-OAR-60-87-Iss1_TM3_watchdog_triggered_warmboot)
+
+2021-03-19 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM2 on 12.03.2021 according to CM/WK
+(see eRO-MPE-OAR-60-85-Iss1_TM2_stopped_generating_events)
+
+2021-03-17 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for reset of TM4 on 15.03.2021 according to SF
+
+2021-03-12 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for first flash of 10.03.2021 micro
+meteoroid event according to MF/SF
+(see eRO-MPE-OAR-60-86-Iss1_TM5_possible_micrometeoroid)
+
+2021-03-11 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 07.03.2021 according to SF
+(see eRO-MPE-OAR-60-84-Iss1_TM2_stopped_generating_frames)
+
+2021-03-08 tm[1,2,3,4,5,6,7]_badcamt_190701v0[2,3,3,6,4,6,3].fits (SF)
+------------------------------------------
+additional badtime added for all ECs from 28.02. to 06.03.2021 according to SF
+due to orbit correction and thermal tests
+
+2021-03-05 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for TM4 on 23.02.2021 according to SF
+micro meteoroid event
+
+2021-03-01 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 27.02.2021 according to IS
+(see eRO-MPE-OAR-60-83-Iss1_TM7_zip_pattern)
+
+2021-02-26 tm5_badcamt_190701v04.fits (SF)
+------------------------------------------
+correction of an incorrectly set bti
+
+2021-02-26 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 24.02.2021 according to SF
+(see eRO-MPE-OAR-60-82-Iss1_TM2_corrupted_image)
+
+2021-02-19 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for 16.02.2021 according to SF
+(see eRO-MPE-OAR-60-???camex)
+
+2021-02-19 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 17.02.2021 according to SF
+(see eRO-MPE-OAR-60-???zip_pattern)
+
+2021-02-16 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 15.02.2021 according to SF
+(see eRO-MPE-OAR-60-78-Iss1_TM1_corrupted_register)
+
+2021-02-12 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 30.01. - 06.02.2021 switch off according to SF
+(eRO-MPE-OAR-60-72-Iss1_TM7_possible_micrometeorite)
+
+2021-02-12 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 09.02.2021 according to SF
+(eRO-MPE-OAR-60-76-Iss1_TM7_no_telemetry_coming)
+
+2021-02-10 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for 08.02.2021 according to MR/RG
+(eRO-MPE-OAR-60-75-Iss1_TM6_stopped_generating_events)
+
+2021-02-04 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 29.01.2021 according to MF
+(eRO-MPE-OAR-60-72-Iss1_TM7_possible_micrometeorite)
+
+2021-02-04 tm3_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 02.02.2021 according to SF
+(see eRO-MPE-OAR-60-74-Iss1_TM3_CAMEX2_noise_map_corruption)
+
+2021-02-04 tm1_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 31.01.2021 according to SF
+(see eRO-MPE-OAR-60-73-Iss1_TM1_noise_map_CMX3_corruption)
+
+2021-01-25 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for 23.01.2021 according to SF/DC
+(see eRO-MPE-OAR-60-71-Iss1_TM6_emergency_mode)
+
+2021-01-14 tm5_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 13.01.2021 according to SF
+(see eRO-MPE-OAR-60-70-Iss1_TM5_emergency_mode)
+
+2021-01-14 tm5_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 12.01.2021 according to SF
+(see eRO-MPE-OAR-60-69-Iss1_TM5_corrupted_register)
+
+2021-01-12 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 08.01.2021 according to SF
+(see eRO-MPE-OAR-60-67-Iss1_TM2_emergency_mode)
+
+2021-01-11 tm4_badcamt_190701v06.fits (SF)
+------------------------------------------
+additional badtime added for 09.01.2021 according to SF/SM
+(see eRO-MPE-OAR-60-68-Iss1_TM4_loss_of_telemetry_and_telecomand)
+
+2020-12-31 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+badtimes added for reset on 29.12.2020 according to SF/WK
+(see eRO-MPE-OAR-60-66-Iss1_TM7_stopped_generating_events)
+
+2020-12-16 tm7_badcamt_190701v03.fits (SF)
+------------------------------------------
+badtimes added for reset due to corrupt register on 16.12.2020 according to SF
+
+2020-12-15 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+badtimes added for malfunction on 12.12.2020 according to SF/DC
+(see eRO-MPE-RP-60-63_tm3_zip_pattern)
+
+2020-12-01 tm6_badcamt_190701v06.fits (SF)
+------------------------------------------
+correction of badtimes to cover time span from start of malfunction
+until switch on after orbit correction on 25.11.2020 according to SF
+(see eRO-MPE-RP-60-61_tm6_zip_pattern)
+
+2020-12-01 tm[5,7]_badcamt_190701v0[6,3].fits (SF)
+------------------------------------------
+correction of badtimes to cover time span from orbit correction until switch on
+after ITC crash on 26.11.2020 according to SF
+
+2020-12-01 tm[1-7]_badcamt_190701v0*.fits (SF)
+------------------------------------------
+badtimes added for the ITC crash on 26.11.2020 according to SF
+
+2020-11-27 tm[4,6]_badcamt_190701v0[6,5].fits (SF)
+------------------------------------------
+badtimes added for the orbit correction on 23.11.2020 according to SF
+
+2020-11-27 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+badtimes added for malfunction/orbit correction on 23.11.2020 according to MR/DC
+(see eRO-MPE-RP-60-60_tm2_zip_pattern)
+
+2020-11-27 tm[1,3]_badcamt_190701v0[2,3].fits (SF)
+------------------------------------------
+badtimes added for the orbit correction on 23.11.2020 according to SF
+
+2020-11-19 tm3_badcamt_190701v03.fits (SF)
+------------------------------------------
+correction of badtime for 11.12.2019 according to SF/CM
+(see eRO-MPE-RP-60-27_BTIs_set_in_caldb)
+
+2020-11-19 tm[1-7]_badcamt_190701v0x.fits (SF)
+------------------------------------------
+subsequential badtimes added for the orbit correction 21.10.2019 according to SF/CM
+(see eRO-MPE-RP-60-27_BTIs_set_in_caldb)
+
+2020-11-18 tm2_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 17.11.2020 according to SF/SM
+(see eRO-MPE-OAR-60-59-Iss1_TM2_zip_pattern)
+
+2020-11-10 tm5_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 10.11.2020 according to according MR/DC
+(see eRO-MPE-OAR-60-58-Iss1_TM5_corrupted_register)
+
+2020-11-11 tm[1-7]_badcamt_190701v0x.fits (SF)
+------------------------------------------
+subsequential badtimes added for eRASS1 and eRASS2 phase according to SF/CM
+(see eRO-MPE-RP-60-27_BTIs_set_in_caldb)
+
+2020-11-09 tm7_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 06.11.2020 according to MR/WK
+(see eRO-MPE-OAR-60-56-Iss1_TM7_corrupted_register)
+
+2020-11-04 tm6_badcamt_190701v04.fits (SF)
+------------------------------------------
+additional badtime added for 04.11.2020 according to SF/RG
+(see eRO-MPE-OAR-60-55-Iss1_TM6_loss_of_telemetry_and_telecomand)
+
+2020-11-04 tm2_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 03.11.2020 according to SF
+(corrupt register, bti only for time span of reset)
+
+2020-10-27 tm4_badcamt_190701v05.fits (SF)
+------------------------------------------
+additional badtime added for 19.10.2020 according to SF/WB
+(see eRO-MPE-OAR-60-52-Iss1_TM4_emergency_mode)
+
+2020-10-26 tm7_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 19.10.2020 according to SF/WB
+(see eRO-MPE-OAR-60-53-Iss1_TM7_loss_of_telemetry_and_telecomand)
+
+2020-10-26 tm6_badcamt_190701v04.fits (SF)
+------------------------------------------
+badtime corrected for 21.10.2020 according to MR/DC
+(see eRO-MPE-OAR-60-54-Iss1_TM6_zip_pattern)
+
+2020-10-22 tm6_badcamt_190701v03.fits (SF)
+------------------------------------------
+additional badtime added for 21.10.2020 according to MR/DC
+(see eRO-MPE-OAR-60-54-Iss1_TM6_zip_pattern)
+
+2020-10-14 tm1_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 09.10.2020 according to SF/DC
+(see eRO-MPE-OAR-60-51-Iss1_TM1_loss_of_telemetry_and_telecomand)
+
+2020-10-14 tm[1-7]_badcamt_190701v[01,02,01,05,01,03,01].fits (SF)
+------------------------------------------
+badtimes added for orbit correction and ITC reset from switch off of
+TM1 (PMIDLE sent) to switch on (PROCMODE=10) of each individual TM
+
+2020-10-13 tm6_badcamt_190701v03.fits (SF)
+------------------------------------------
+badtime for 03.10.2020 now according to ISO standard (SF)
+
+2020-10-09 tm6_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 03.10.2020 according to MR/DC
+(see eRO-MPE-OAR-60-49-Iss1_TM6_continuous_bitflip_error_generation)
+
+2020-10-06 tm5_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for tm5 for CalPV-phase according to CM/SF
+
+2020-09-30 tm6_badcamt_190701v02.fits (SF)
+------------------------------------------
+multiple badtimes deleted which where inserted by append_bti
+due to a typo according to S. Friedrich
+
+2020-09-30 tm2_badcamt_190701v02.fits (SF)
+------------------------------------------
+additional badtime added for 13.09.2020 according to D. Coutinho
+(see eRO-MPE-OAR-60-47-Iss1_TM2_increased_event_rate_CAMEX3)
+
+2020-09-30 tm1_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 12.09.2020 according to S. Friedrich
+
+2020-09-30 tm1_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 08.09.2020 according to S. Friedrich
+
+2020-09-29 tm[1-6]_badcamt_190701v0[1,2,1,5,1,1].fits (SF)
+------------------------------------------
+badtimes added for tm1-tm6 for CalPV-phase according to CM/SF
+
+2020-09-16 tm4_badcamt_190701v05.fits (SF)
+------------------------------------------
+badtime corrected for 27.08.2020 and 07.08.2020
+
+2020-09-15 tm4_badcamt_190701v03.fits (SF)
+------------------------------------------
+badtime changed to UTC for 27.08.2020
+
+2020-09-15 tm4_badcamt_190701v02.fits (SF)
+------------------------------------------
+badtime changed to UTC for 07.08.2020
+
+2020-09-15 tm2_badcamt_190701v02.fits (SF)
+------------------------------------------
+badtime changed to UTC for 02.08.2020
+
+2020-09-14 tm4_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 06.09.2020 according to D. Coutinho
+(see eRO-MPE-OAR-60-44-Iss1_TM4_image_corruption_and_IPHI123_offlimits)
+
+2020-09-09 tm7_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 07.09.2020 according to S. Friedrich
+(see eRO-MPE-OAR-60-43-Iss2_TM7_low_eventrates)
+
+2020-09-09 tm5_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 05.09.2020 according to M. Ramos-Ceja
+(see eRO-MPE-OAR-60-42-Iss1_T5_Emergency_Mode)
+
+2020-09-01 tm3_badcamt_190701v01.fits (CM)
+------------------------------------------
+additional badtime added for 25.08. and 28.08.2020 according to I. Stewart
+(see eRO-MPE-OAR-60-37-Iss1_TM3_corrupt_image_and_zip_pattern)
+
+2020-08-31 tm4_badcamt_190701v01.fits (CM)
+------------------------------------------
+additional badtime added for 27.08.2020 according to M. Ramos-Ceja
+(see eRO-MPE-OAR-60-40-Iss1_TM4_Emergency_Mode)
+
+2020-08-12 tm2_badcamt_190701v01.fits (CM)
+------------------------------------------
+additional badtime added for 02.08.2020 according to A. Gueguen
+(see eRO-MPE-OAR-60-38-Iss1_TM2_emergency_mode)
+
+2020-08-11 tm4_badcamt_190701v01.fits (CM)
+------------------------------------------
+additional badtime added for 07.08.2020 according to C. Maitra
+(see eRO-MPE-OAR-60-37-Iss1_TM4_emergency_mode)
+
+2020-07-30 tm1_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 19./20.07.2020 according to M. Ramos-Ceja
+(see eRO-MPE-OAR-60-34-Iss1_TM1_increased_event_rate_CAMEX1)
+
+2020-07-27 tm4_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 20.07.2020 according to M. Ramos-Ceja
+(see eRO-MPE-OAR-60-33-Iss1_TM4_corrupt_image_and_zip_pattern)
+
+2020-07-21 tm3_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 16.07.2020 according to M. Ramos-Ceja
+(see OAR eRO-MPE-OAR-60-31-Iss1_TM3_corrupted_image)
+
+2020-07-21 tm4_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 15.07.2020 according to C. Maitra
+(see OAR eRO-MPE-OAR-60-29-Iss1_TM4_event_quota_exceeded)
+
+2020-07-17 tm5_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added for 08.07.2020 according to I. Stewart 
+
+2020-06-19 tm4_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added before reset on 12.6.2020 
+
+2020-06-04 tm6_badcamt_190701v01.fits (SF)
+------------------------------------------
+additional badtime added 
+
+2020-06-04 tm<1-7>_badcamt_190701v01.fits (SF)
+------------------------------------------
+badtimes before ITC malfiunction according to M. Freyberg added
+
+2020-06-04 tm<3,6>_badcamt_190701v01.fits (SF)
+------------------------------------------
+typo in column headers (UCT -> UTC) corrected
+
+2020-05-28 tm3_badcamt_190701v01.fits (SF)
+------------------------------------------
+tm3_badcamt_190701v01.fits from I. Stewart added
+
+
+2020-05-28 tm6_timeoff_190701v01.fits (SF)
+------------------------------------------
+tm6_badcamt_190701v01.fits from I. Stewart added
+
+
+2020-08-11 tm4_badcamt_190701v01.fits (CM)
+------------------------------------------
+tm4_badcamt_190701v01.fits from I. Stewart added
+
+2020-08-12 tm2_badcamt_190701v01.fits (CM)
+------------------------------------------
+tm2_badcamt_190701v01.fits from I. Stewart added
+
+2020-08-31 tm4_badcamt_190701v01.fits (CM)
+------------------------------------------
+tm4_badcamt_190701v01.fits from M. Ramos added
+
+2020-09-01 tm3_badcamt_190701v01.fits (CM)
+------------------------------------------
+tm3_badcamt_190701v01.fits from I. Stewart added
+tm3_badcamt_190701v01.fits from I. Stewart added
+
+
+
+

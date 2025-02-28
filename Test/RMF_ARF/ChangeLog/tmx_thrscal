@@ -1,0 +1,17 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: thrmap
+
+Add new entries here:
+
+tm4_thrscal_200119v02 - 2021-12-22 (SFriedrich)
+--------------------------------
+Scaled threshold map for TM4 only; different threshold values
+for individual pixels
+
+200119v01 - 2020-01-20 (SFriedrich)
+--------------------------------
+Scaled threshold map suitable from evprep-2.21
+

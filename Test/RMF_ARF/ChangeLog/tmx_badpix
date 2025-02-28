@@ -1,0 +1,337 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: badpix
+
+Add new entries here:
+
+tm7_210616v01 - 2022-02-14 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 12.02.2022
+according to command log
+
+tm7_210616v01 - 2022-01-28 (SF)
+--------------------------------
+times of new badpixels (227,163) and (226,164) added which were set to bad on board
+since 27.01.22 13:09:13
+
+tm7_210616v01 - 2022-01-20 (SF)
+--------------------------------
+times of new badpixels (227,163; 226, 164-165) added which were set to bad
+since 05.01.2022 (micro meteroid) on ground til "infinity"
+
+tm5_210616v02 - 2022-01-18 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 15.01.2022
+according to command log
+update of times of badpixels due to monitoring on 07.08.2021
+according to command log (was missing in badpixel file)
+
+tm7_210616v01 - 2022-01-14 (SF)
+--------------------------------
+times of new badpixels (227,164-165) added which were set to bad on board
+
+tm7_210616v01 - 2022-01-12 (SF)
+--------------------------------
+times of new badpixels (227,164-165) added which were set to bad
+since 05.01.2022 (micro meteroid) on ground til "infinity"
+
+tm4_210805v01 - 2021-12-15 (SF)
+--------------------------------
+new bad pixel file valid after upload of scaled threshold map
+
+tm7_210616v01 - 2021-12-08 (SF)
+--------------------------------
+times of new badpixels which were set to bad on ground til "infinity" added
+(tm7_addlist_OG_081221)
+
+tm5_210616v01 - 2021-12-07 (SF)
+--------------------------------
+times of new badpixels (including those from 04.12.21 set bad on board)
+which were set to bad on ground til "infinity" added
+(tm5_addlist_OG_071221)
+
+tm5_210616v01 - 2021-12-07 (SF)
+--------------------------------
+times of new badpixels which were set to bad on board on 04.12.2021 added
+(tm5_addlist_041221)
+
+tm7_210616v01 - 2021-08-10 (SF)
+--------------------------------
+set additional pixels (82/73, 5/109, 134/142, 28/198) bad on ground until "infinity"
+
+tm2_210117v01 - 2021-11-03 (SF)
+--------------------------------
+set additional pixels (198-199, 173) bad on ground until "infinity"
+
+tm4_210616v01 - 2021-09-07 (SF)
+--------------------------------
+update of times of badpixels, new style of badpix file: 
+pixels are set bad on ground until "infinity", new entries then
+give only times when set bad on board
+
+tm7_210616v01 - 2021-08-10 (SF)
+--------------------------------
+update of times of badpixels which were not set, new style of
+badpix file: pixels are set bad on ground until "infinity", new entries then
+give only times when set bad on board
+
+tm5_210616v01 - 2021-08-04 (SF)
+--------------------------------
+update of times of badpixels which were not set, new style of
+badpix file: pixels are set bad on ground until "infinity", new entries then
+give only times when set bad on board
+
+tm5_210310v12 - 2021-07-28 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 19.07.2021 and
+including new badpixels, according to command log
+
+tm4_210223v09 - 2021-07-06 (SF)
+--------------------------------
+update/added times of bad pixels which don't have a start time of 667371724 (= time
+of micrometeorite event) for very first entry of bad on ground; times for 146 1-384
+corrected to avoid bad on board and bad on ground at the same time during the
+zip pattern 14.6.-17.6.2021
+
+tm4_210223v08 - 2021-07-06 (SF)
+--------------------------------
+update times of bad pixels due to sweep test on 05.06.2021, set additional
+bad pixel commanded on 17.06.2021, set som columns bad on ground due to soft
+zip pattern
+
+tm5_210310v11 - 2021-07-05 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 03.07.2021 
+according to command log
+
+tm5_210310v10 - 2021-06-29 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 27.5.2021 before a reset,
+according to command log
+
+tm7_210211v06 - 2021-06-25 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 22.5., 05.06.,and 19.06.2021
+according to command log
+
+tm5_210310v09 - 2021-06-25 (SF)
+--------------------------------
+update of times of badpixels due to monitoring on 22.5., 05.06.,and 19.06.2021
+according to command log
+
+tm4_210223v07 - 2021-06-30 (SF)
+--------------------------------
+update times of bad pixels due to sweep test on 21.05.2021 and set additional
+bad pixel commanded on 27.05.2021
+
+tm4_210223v06 - 2021-05-18 (SF)
+--------------------------------
+set additional bad pixel for TM4; correct times of the old group of four pixels,
+because they are included in the pixel lists
+
+tm5_210310v08 - 2021-05-17 (SF)
+--------------------------------
+with reset of TM5 on 15.5.2021 pixel 19/288 was successfully set to bad on
+board again, times were accordingly changed
+
+tm5_210310v07 - 2021-05-11 (SF)
+--------------------------------
+update of times of TM5 bad pixel list due to monitoring of bad pixels
+on 08.05.2021 according to command log; pixel 19/288 set to bad on ground
+
+tm7_210211v05 - 2021-05-11 (SF)
+--------------------------------
+update of times of TM7 bad pixel list due to monitoring of bad pixels
+on 08.05.2021 according to command log
+
+tm7_210211v04 - 2021-04-27 (SF)
+--------------------------------
+update of times of TM7 bad pixel list due to monitoring of bad pixels
+on 24.04.2021 according to command log
+
+tm5_210310v06 - 2021-04-27 (SF)
+--------------------------------
+update of times of TM5 bad pixel list due to monitoring of bad pixels
+on 24.04.2021 according to command log
+
+tm5_210310v05 - 2021-04-14 (SF)
+--------------------------------
+adding new bad pixels which were set bad on board because they emit above
+or near MIP trigger, times according to command log
+
+tm7_210211v03 - 2021-04-12 (SF)
+--------------------------------
+update of times of TM7 bad pixel list due to monitoring of bad pixels
+on 10.04.2021 according to command log
+
+tm5_210310v04 - 2021-04-12 (SF)
+--------------------------------
+update of times of TM5 bad pixel list due to monitoring of bad pixels
+on 10.04.2021 according to command log
+
+tm4_210223v05 - 2021-04-09 (SF)
+--------------------------------
+update of TM4 bad pixel list due to micro meteoroid event
+according to command logs after monitoring and adding new pixels
+
+tm7_210211v02 - 2021-03-28 (SF)
+--------------------------------
+update of times of TM7 bad pixel list due to monitoring of bad pixels
+according to command log
+
+tm5_210310v03 - 2021-03-28 (SF)
+--------------------------------
+update of times of TM5 bad pixel list due to monitoring of bad pixels
+according to command log
+
+tm5_210310v02 - 2021-03-16 (SF)
+--------------------------------
+update of times of TM5 bad pixel list due to micro meteoroid event
+according to command log
+
+tm4_210223v04 - 2021-03-15 (SF)
+--------------------------------
+update of times of TM4 bad pixel list due to micro meteoroid event
+according to command logs
+
+tm5_210310v01 - 2021-03-12 (SF)
+--------------------------------
+set bad pixels for TM5 according to M. Freyberg
+due to micro meteoroid event
+
+tm4_210223v03 - 2021-03-08 (SF)
+--------------------------------
+set additional bad columns for TM4 according to M. Freyberg
+due to micro meteoroid event
+
+tm4_210223v02 - 2021-03-06 (SF)
+--------------------------------
+set additional bad columns for TM4 according to M. Freyberg
+due to micro meteoroid event
+
+tm4_210223v01 - 2021-03-05 (SF)
+--------------------------------
+set additional bad pixels for TM4 according to M. Freyberg
+due to micro meteoroid event
+
+tm7_210211v01 - 2021-02-15 (SF)
+--------------------------------
+set time span when 42 bad pixels of TM7 were not bad onboard
+
+tm7_210210v01 - 2021-02-15 (SF)
+--------------------------------
+set time span when 42 bad pixels of TM7 were not bad onboard
+
+tm7_210207v01 - 2021-02-15 (SF)
+--------------------------------
+set time span when 42 bad pixels of TM7 were not bad onboard
+
+tm7_2101290v04 - 2021-02-15 (SF)
+--------------------------------
+minor correction (+-1sec) to start and end time 
+
+tm7_2101290v03 - 2021-02-09 (SF)
+--------------------------------
+upload correct file version as v03
+
+tm7_2101290v02 - 2021-02-09 (SF)
+--------------------------------
+set new end times in caldb for the 42 additional bad pixel for TM7
+and set the same 42 pixels bad onboard for the time after endtime in caldb
+(end time for pixels is time when PMENV2 was sent to TM7)
+
+tm7_2101290v01 - 2021-02-04 (SF)
+--------------------------------
+set 42 additional bad pixel for TM7 according to M. Freyberg
+(see eRO-MPE-OAR-60-72-Iss1_TM7_possible_micrometeorite)
+
+tm3_201127v01 - 2021-01-29 (SF)
+--------------------------------
+chnage of start time and PHA for TM3 according to S. Friedrich/C. Maitra
+rawx= 120 rawy= 35 pha=[0:300]
+
+tm2_2101170v01 - 2021-01-29 (SF)
+--------------------------------
+set additional bad pixel for TM2 according to S. Friedrich/C. Maitra
+rawx= 208 rawy= 74 pha=[0:300]
+rawx= 182 rawy= 79 pha=[0:300]
+
+tm3_201230v01 - 2021-01-06 (SF)
+--------------------------------
+set additional bad pixel for TM3 according to S. Friedrich/M. Ramos-Ceja
+rawx= 120 rawy= 35 pha=[0:32767]
+
+tm6_191023v01 - 2020-09-25 (SF)
+--------------------------------
+set additional bad pixel for TM6 according to C. Maitra
+rawx=261 rawy= 74 pha=[0:32767]
+rawx=334 rawy=151 pha=[0:32767]
+
+
+tm4_191205v02 - 2020-04-03 (SF)
+--------------------------------
+set additional bad pixel for TM4 according to C. Maitra
+rawx= 178 rawy=225 pha=[0:32767]
+rawx= 177 rawy=225 pha=[0:32767]
+rawx= 178 rawy=224 pha=[0:32767]
+rawx= 178 rawy=226 pha=[0:32767]
+rawx= 179 rawy=225 pha=[0:32767]
+rawx= 328 rawy=184 pha=[0:32767]
+rawx= 115 rawy=235 pha=[0:32767]
+rawx= 114 rawy=235 pha=[0:32767]
+rawx= 115 rawy=234 pha=[0:32767]
+rawx= 115 rawy=236 pha=[0:32767]
+rawx= 116 rawy=235 pha=[0:32767]
+rawx= 139 rawy=123 pha=[0:32767]
+rawx= 155 rawy=156 pha=[0:32767]
+
+
+990101v01 - 2020-01-31 (SF)
+--------------------------------
+empty bad pixel file added for TM4 to cover
+whole time span 
+
+
+200108v01 - 2020-01-10 (SF)
+--------------------------------
+empty bad pixel files added for TM1, TM3, TM5
+
+
+200108v01 - 2020-01-09 (SF)
+--------------------------------
+set bad pixel of TM2:
+rawx=216 rawy=[1:4]     pha<300
+rawx=216 rawy=[166:384] pha<300
+
+set bad pixel of TM4:
+rawx=302  rawy=82       pha=[0:32767]
+rawx=302  rawy=83       pha=[0:32767]
+rawx=303  rawy=82       pha=[0:32767]
+rawx=303  rawy=83       pha=[0:32767]
+
+set bad pixel of TM6:
+rawx=1 rawy=1       pha=[0:32767]
+
+set bad pixel of TM7:
+rawx=154 rawy=292       pha<300
+
+old versions of badpix deleted from caldb.indx
+
+
+140602v03 - 2018-02-27 (creator)
+--------------------------------
+
+140602v02 - 2018-02-27 (creator)
+--------------------------------
+
+130602v02 - 2018-02-27 (creator)
+--------------------------------
+
+140602v01 - 2018-02-27 (creator)
+--------------------------------
+
+
+
+

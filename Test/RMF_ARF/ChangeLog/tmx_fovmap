@@ -1,0 +1,21 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: fovmap
+
+Add new entries here:
+
+190822v01 - 2019-11-30 (SFriedrich)
+--------------------------------
+fovmaps added to caldb, same format as detmaps but integer values
+
+
+100602v02 - 2018-05-28 (creator)
+--------------------------------
+
+100602v01 - 2018-03-22 (creator)
+--------------------------------
+
+
+

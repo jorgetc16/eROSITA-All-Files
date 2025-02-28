@@ -1,0 +1,63 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: gyro
+CAL_TYPE: boresight
+
+Add new entries here:
+
+
+200611v11 - 2022-02-01 (GL)
+--------------------------------
+- boresight calibration file from 1-Feb-2022
+- calibrated using average astrometric correction values
+  for the c946 eRASS2-4 catalogues.
+- valid from 201106 (start of eRASS2)
+- wrt. 191208v09, applies rotations of
+  1.2405350" of SRG_Z  and 0.6494815" of SRG_Y
+
+191208v10 - 2022-02-01 (GL)
+--------------------------------
+- boresight calibration file from 1-Feb-2022
+- calibrated using AllWISE astrometric correction values
+  in the c947 eRASS1 catalogue.
+- valid for eRASS1 
+- wrt. 191208v09, applies rotations of
+  1.627955" of SRG_Z  and 0.0628305" of SRG_Y
+
+
+
+191208v09 - 2020-11-06 (SF)
+--------------------------------
+boresight calibration file from June 2020 by G. Lamer
+extended backwards to cover eRASS1
+
+200611v08 - 2020-07-14 (SF)
+--------------------------------
+new Gyro boresight calibration file, based on the
+corrections needed for the most recent eRASS:2 source
+positions by G. Lamer
+
+
+191131v07 - 2019-12-09 (GLamer)
+--------------------------------
+Boresight calibration based on NGC 2516 observation on 2019-11-31.
+TIMELAG=0.0
+To be used with tmx_instpar files released on  2019-12-09.
+
+
+170630v05 - 2019-10-02 (GLamer)
+--------------------------------
+Added column TIMELAG.
+TIMELAG=-0.9436, calibrated using survey scan
+on 2019-09-23.
+
+
+170630v04 - 2019-08-28
+-----------------------
+First in-orbit boresight calibration based on UDS pointing. 
+
+
+160309v01 - 2018-04-19 (GLamer)
+--------------------------------
+

@@ -1,0 +1,24 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: patfrac
+
+Add new entries here:
+
+140625v01 - 2018-02-27 (creator)
+--------------------------------
+
+  No. Type     EXTNAME      BITPIX Dimensions(columns)      PCOUNT  GCOUNT
+ 
+   0  PRIMARY                  8     0                           0    1
+   1  BINTABLE PATFRAC         8     24(6) 2067                  0    1
+ 
+      Column Name                Format     Dims       Units     TLMIN  TLMAX
+      1 ENERG_LO                   E                   keV
+      2 ENERG_HI                   E                   keV
+      3 s                          1E
+      4 d                          1E
+      5 t                          1E
+      6 q                          1E
+ 

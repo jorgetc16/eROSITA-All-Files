@@ -1,0 +1,17 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: CALDB
+FILE: calvers.indx
+REMARKS: the calibration files listed in calvers.indx must have the 
+quality flag = 0 in the caldb.indx file. The name of the release which 
+is to be used  must match that in the RELEASE file in $SASS_ROOT.
+
+Add new entries here:
+
+2023-06-06 calvers.indx (SF)
+------------------------------------------
+template for calvers.indx
+
+
+

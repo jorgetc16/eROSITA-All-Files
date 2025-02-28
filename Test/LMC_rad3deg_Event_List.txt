@@ -1,0 +1,15 @@
+/home/regis/eROSITA/156/066/EXP_010/em01_066156_020_EventList_c010.fits
+/home/regis/eROSITA/156/073/EXP_010/em01_073156_020_EventList_c010.fits
+/home/regis/eROSITA/156/080/EXP_010/em01_080156_020_EventList_c010.fits
+/home/regis/eROSITA/159/067/EXP_010/em01_067159_020_EventList_c010.fits
+/home/regis/eROSITA/159/074/EXP_010/em01_074159_020_EventList_c010.fits
+/home/regis/eROSITA/159/082/EXP_010/em01_082159_020_EventList_c010.fits
+/home/regis/eROSITA/159/090/EXP_010/em01_090159_020_EventList_c010.fits
+/home/regis/eROSITA/159/098/EXP_010/em01_098159_020_EventList_c010.fits
+/home/regis/eROSITA/162/068/EXP_010/em01_068162_020_EventList_c010.fits
+/home/regis/eROSITA/162/077/EXP_010/em01_077162_020_EventList_c010.fits
+/home/regis/eROSITA/162/086/EXP_010/em01_086162_020_EventList_c010.fits
+/home/regis/eROSITA/162/095/EXP_010/em01_095162_020_EventList_c010.fits
+/home/regis/eROSITA/165/069/EXP_010/em01_069165_020_EventList_c010.fits
+/home/regis/eROSITA/165/079/EXP_010/em01_079165_020_EventList_c010.fits
+/home/regis/eROSITA/165/090/EXP_010/em01_090165_020_EventList_c010.fits

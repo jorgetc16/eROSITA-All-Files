@@ -1,0 +1,332 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: timeoff
+
+Add new entries here:
+
+2022-02-11 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after reset on 10.02.2022 13:36 UTC (=SCTSTAT=0) 
+added by S. Friedrich 
+
+2022-01-31 tm6_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after reset on 29.01.2022 13:09 UTC (=SCTSTAT=0) 
+added by S. Friedrich 
+
+2022-01-20 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after reset on 17./18.01.2022 13:08 UTC (PMIDLE
+after IRESCE2) added by S. Friedrich 
+
+2022-01-17 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump after ITC reset on 14.01.2022 13:51 UTC (=STCSTAT=0)
+added by S. Friedrich 
+
+2022-01-10 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump after reset on 07.01.2022 13:21 UTC (=STCSTAT=0)
+added by S. Friedrich 
+
+2021-12-27 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after reset on 23.12.2021 14:44 UTC (=STCSTAT=0)
+added by S. Friedrich 
+
+2021-12-19 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after reset on 18.12.2021 15:01 UTC (=STCSTAT=0)
+added by S. Friedrich 
+
+2021-11-12 tm5_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after reset on 11.11.2021 17:43 UTC (=STCSTAT=0)
+added by S. Friedrich 
+
+2021-11-09 tm5_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after switch-on on 08.11.2021 17:48 UTC (=STCSTAT=0)
+added by S. Friedrich 
+
+2021-10-25 tm[1,2,3]_timeoff_190701v[01,02,02].fits (SF)
+------------------------------------------
+time jump from 23.10.2021 18:28 UTC (=power on)
+after ITC crash added by S. Friedrich
+
+2021-10-11 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 10.10.2021 12:58 UTC (=STCSTAT=0)
+added by S. Friedrich
+
+2021-10-11 tm3_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 10.10.2021 12:41 UTC (=STCSTAT=0)
+added by S. Friedrich
+
+2021-09-17 tm1_timeoff_190701v01.fits (CM)
+------------------------------------------
+time jump from TM1 reset on 16.09.21 18:00 UTC (just before PMENV2)
+
+2021-09-13 tm4_timeoff_190701v02.fits (CM)
+------------------------------------------
+time jump from the orbit correction on 06.09.2021 16:30 UTC (time between PMIDLE PMENV2)
+
+2021-09-13 tm5_timeoff_190701v02.fits (CM)
+------------------------------------------
+time jump from the orbit correction on 06.09.2021 16:30 UTC (time between PMIDLE and PMENV2) 
+
+2021-08-30 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 28.08.2021 17:27 UTC (=STCSTAT=0)
+added by S. Friedrich
+
+2021-08-23 tm5_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 21.08.2021 16:42 UTC (=STCSTAT=0)
+added by S. Friedrich
+
+2021-08-17 tm3_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 11.08.2021 17:38 UTC (=STCSTAT=0)
+added by S. Friedrich
+
+2021-08-02 tm3_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 31.07.2021 17:10 UTC (=STCSTAT=0)
+added by S. Friedrich
+
+2021-07-12 tm3_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 08.07.2021 18:16 UTC (=power on)
+after ITC crash added by S. Friedrich
+
+2021-07-02 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 17.06.2021 19:53 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-07-02 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 29.06.2021 19:11 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-06-28 tm5_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 27.06.2021 13:11 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-30 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump of 24.05.2021 due to switch on after orbit
+correction 18:30 UTC (=shortly before PMENV2 is set)
+added by S. Friedrich
+
+2021-05-30 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 27.05.2021 17:42 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-27 tm[1,3,5,7]_timeoff_190701v0[1,2,2,2].fits (SF)
+------------------------------------------
+time jumps of 24.05.2021 due to switch on after orbit
+correction 18:30 UTC (1,3) and 18:50 UTC (5,7) (=shortly
+before PMENV2 is set) added by S. Friedrich
+
+2021-05-25 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 21.05.2021 16:41 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-25 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 19.05.2021 15:09 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-17 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 14.05.2021 17:20 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-04 tm6_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 01.05.2021 15:47 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-04 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 01.05.2021 15:21 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-04 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 01.05.2021 14:39 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-05-03 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 28.04.2021 14:35 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-04-26 tm7_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 22.04.2021 14:55 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-04-26 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 22.04.2021 14:27 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-04-05 tm6_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 01.04.2021 17:00 UTC (between PMIDLE and PMENV2)
+added by S. Friedrich
+
+2021-03-09 tm[1,3,6]_timeoff_190701v0[1,2,2].fits (SF)
+------------------------------------------
+time jumps of 06.03.2021 due to switch on after orbit
+correction (=SCTSTAT=0) added by S. Friedrich
+
+2021-02-19 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 17.02.2021 15:03 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-02-19 tm6_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 17.02.2021 14:28 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-02-17 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 15.02.2021 15:15 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2021-02-08 tm7_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 06.02.2021 14:25 UTC (just before time sync is enabled)
+added by S. Friedrich
+
+2021-01-11 tm2_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 08.01.2021 14:45 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-12-01 tm[1,2,3,4,6]_timeoff_190701v[01,02,02,02,02].fits (SF)
+------------------------------------------
+time jump after ITC crash on 26.11.2020 (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-12-01 tm[4,6]_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump after orbit correction on 23.11.2020 (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-11-10 tm5_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 10.11.2020 17:35 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-10-27 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+TM4 out of time sync correction between 20.10.2020 06:01:30 UTC to 22.10.2020 18:11:43
+according to SF/WB (eRO-MPE-OAR-60-52-Iss1_TM4_emergency_mode)
+
+2020-10-22 tm7_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 19.10.2020 18:28:15 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-10-12 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 09.10.2020 15:12:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-10-12 tm[1,4,5,6,7]_timeoff_190701v[01,02,02,02,02].fits (SF)
+------------------------------------------
+time jump from 06/07.10.2020 due to ITC reset corrected. time set
+to 16:00 UTC , half an hour before TM 1 was switched on again,
+the other cameras are switched on later
+added by S. Friedrich
+
+2020-09-14 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 12.09.2020 17:28:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-09-10 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 08.09.2020 17:59:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-09-10 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+time jump from 08.09.2020 17:20:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-07-22 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 20.07.2020 18:40:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-07-20 tm3_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 16.07.2020 21:00:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-07-17 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 15.07.2020 20:15:00 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-06-25 tm5_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 22.06.2020 16:25 UTC (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-06-25 tm3_timeoff_190701v02.fits (SF)
+------------------------------------------
+timeshift of TM3 between 2.-4. November 2019
+corrected by +1 sec
+
+2020-06-12 tm4_timeoff_190701v02.fits (SF)
+------------------------------------------
+time jump from 12.06.2020 19:35 (=SCTSTAT=0)
+added by S. Friedrich
+
+2020-06-03 tm<2,4-7>_timeoff_190701v02.fits (SF)
+------------------------------------------
+times of occurence of timeshifts for TM2, 4,5,6,7
+corrected by S. Friedrich
+
+
+2020-05-28 tm3_timeoff_190701v01.fits (SF)
+------------------------------------------
+timeshift of TM3 between 2.-4. November 2019 added
+
+
+2020-05-28 tm1_timeoff_190701v01.fits (SF)
+------------------------------------------
+timeshift of TM1 between 16.-17. October added
+
+
+2020-05-12 tm3_timeoff_190701v01.fits (SF)
+------------------------------------------
+timeshift of TM3 on 2020-05-09 added
+
+
+2020-05-12 tm5_timeoff_190701v01.fits (SF)
+------------------------------------------
+timeshift of TM5 on 2020-05-06 added
+
+
+2020-04-23 tm<1-7>_timeoff_190701v01.fits
+------------------------------------------
+
+Camera specific 1 sec time jumps.
+
+
+

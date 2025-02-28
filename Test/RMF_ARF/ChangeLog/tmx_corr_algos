@@ -1,0 +1,34 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: corr_algos
+
+Add new entries here:
+
+2021-06-15 tm[5,7]_corr_algos_190701v02.fits (SF)
+------------------------------------------
+Time format corrected for TM5+7 (from I. Stewart) 
+
+2021-06-14 tm7_corr_algos_190701v01.fits (SF)
+------------------------------------------
+Camera specific settings added to ensure that TM7 is given
+the correct thresholding (from I. Stewart) 
+
+2021-06-14 tm5_corr_algos_190701v01.fits (SF)
+------------------------------------------
+Camera specific settings added to ensure that TM5 is given
+the correct thresholding (from I. Stewart) 
+
+2020-07-02 tm5_corr_algos_190701v01.fits (SF)
+------------------------------------------
+Camera specific settings for codes used once for
+specific purposes (from I. Stewart) 
+
+2020-07-02 tm7_corr_algos_190701v01.fits (SF)
+------------------------------------------
+Camera specific settings for codes used once for
+specific purposes (from I. Stewart)
+
+
+

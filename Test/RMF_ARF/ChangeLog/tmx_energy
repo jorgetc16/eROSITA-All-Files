@@ -1,0 +1,85 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: energy
+
+Add new entries here:
+
+tm[1-7]_energy_190714v06 - 2021-11-16 (SF)
+--------------------------------
+new versions with noise suppression for lower energies from K. Dennerl uploaded
+
+tm7_energy_190714v05 - 2021-02-29 (SF)
+--------------------------------
+new version with updated parameters from K. Dennerl
+
+tm[1-7]_energy_190714v04 - 2021-02-23 (SF)
+--------------------------------
+new versions with temperature dependence from K. Dennerl uploaded
+
+200130v03 - 2020-01-31 (K. Dennerl)
+--------------------------------
+new versions from K. Dennerl uploaded
+
+
+180528v02 - 2018-05-30 (creator)
+--------------------------------
+
+130101v01 - 2018-05-28 (creator)
+--------------------------------
+
+file: tmx_energy_xxxxxxvxx.fits
+
+  No. Type     EXTNAME      BITPIX Dimensions(columns)      PCOUNT  GCOUNT
+ 
+   0  PRIMARY                  8     0                           0    1
+   1  BINTABLE CTE_GAIN_1      8     32(8) 384                   0    1
+ 
+      Column Name                Format     Dims       Units     TLMIN  TLMAX
+      1 ac                         1E
+      2 bc                         1E
+      3 cc                         1E
+      4 ag                         1E
+      5 bg                         1E
+      6 ar                         1E
+      7 br                         1E
+      8 cr                         1E
+ 
+   2  BINTABLE CTE_GAIN_2      8     16(4) 4                     0    1
+ 
+      Column Name                Format     Dims       Units     TLMIN  TLMAX
+      1 sc                         1E
+      2 dc                         1E
+      3 tc                         1E
+      4 qc                         1E
+ 
+   3  BINTABLE CTE_GAIN_3      8     22(2) 8                     0    1
+ 
+      Column Name                Format     Dims       Units     TLMIN  TLMAX
+      1 energy                     1E                  keV
+      2 file name                  18A
+ 
+ 
+CTE_GAIN_1
+
+ac
+bd
+cc
+ag
+bg
+ar
+br
+cr
+
+CTE_GAIN_2
+
+sc  energy adjustment for singles
+dc  energy adjustment for doubles
+tc  energy adjustment for triples
+qc  energy adjustment for quadruples
+
+CTE_GAIN_3
+
+energy
+file name

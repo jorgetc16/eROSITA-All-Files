@@ -1,0 +1,38 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: slet_psf
+
+Add new entries here:
+
+171218v02 - 2019-01-18 (AGE)
+--------------------------------
+The shapelet PSF calbration files in all FMs
+correspond to the PANTER PSF measurements carried
+out on FM1. This calibration corresponds to the
+latest 3-scale PSF model. 
+
+
+151222v01 - 2019-01-18 (AGE)
+--------------------------------
+This version corresonds to the PANTER FM1 
+measurements. This is the old 2-scale 
+shapelet model, which is *INCONSISTENT*
+with the current version of the SLIB
+
+
+160726v01 -  2019-01-18 (AGE)
+--------------------------------
+This version appears only in FM2 and 
+corresponds to the FM2 PANTER measurements. 
+This is the old 2-scale shapelet model.
+which is *INCONSISTENT* with the current 
+version of the SLIB
+
+
+171218v02 - 2018-02-27 (creator)
+--------------------------------
+
+151222v01 - 2018-02-27 (creator)
+--------------------------------

@@ -1,0 +1,35 @@
+                                                              HB 20100308
+
+Naming convention for eROSITA calibration files: 
+================================================
+
+Change log:
+
+2010-06-02 version numbering changed from '-<nn>' to 'v<nn>' to prevent 
+           potential problems with minus signs in file names (particular in 
+           EXSAS) -HB
+
+
+<intrume>_<name>[_<detnam>][_<filter>]_<startvalidity>v<nn>.fits
+
+
+instrume: content of INSTRUME keyword in cal file
+          dummy calibration for testing, etc.: sim0, sim1, ...
+          eROSITA flight telescopes/cameras: whatever1...whatever7 
+          calibration files applying to all telescopes/cameras: gen[eral]
+          something applying to ground testing?
+       
+name:     type of calibration file from CCLS0001 keyword of cal file but 
+          omitting the "_"; should comply with established OGIP standards 
+          where possible
+
+detnam, filter: if needed to destinguish between calibration datasets,
+          these optional keywords may be used, in which case they 
+          also need be part of the filename (should only be used
+          where needed, e.g., to destinguish between several different 
+          filters used in one camera, or between different cameras used 
+          with the same mirror module, etc.).
+      
+startvalidity: validity start date from CVSD0001 keyword in the form 'yymmdd'
+
+nn:       version number

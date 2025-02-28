@@ -1,0 +1,149 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: instpar
+
+Add new entries here:
+
+
+2020-05-10 tm3_instpar_200509v12.fits (GL)
+----------------------------------------------
+tm3_instpar_200509v12.fit  TIMELAG=0.897809029 2020-05-09 14:53:00
+
+
+
+2020-05-09 tm5_instpar_200506v11.fits (GL)
+----------------------------------------------
+tm5_instpar_200506v11.fits  TIMELAG=0.897809029 2020-05-06 15:30:00
+
+
+2020-04-17 tm<1-7>_instpar_190701v15.fits
+------------------------------------------
+
+Set TIMELAG=-0.102191 for all cameras.
+The camera specific 1 sec time jumps are not included  in this version.
+These files are to be used by evatt only for event files
+processed by evprep with the parameter setting correct_time=yes.
+
+2020-04-06 tm3_instpar_200404v11.fits (SF):
+----------------------------------------------
+tm3_instpar_200403v11.fits  -0.102191        2020-04-03 14:50:00
+
+
+2020-04-03 tm1_instpar_200331v10.fits (SF):
+----------------------------------------------
+tm1_instpar_200331v10.fits  -0.1021909714        2020-03-31 15:45:00
+
+
+2020-03-26 tm2_instpar_191203v13.fits (SF):
+----------------------------------------------
+new tm2_instpar_191203v13.fits with changed validity date to
+03.12.2019 08:00:00 and set quality flag of tm2_instpar_191208v10.fits to 5
+
+
+2020-03-25 tm5_instpar_200212v10.fits (Glamer):
+----------------------------------------------
+tm5_instpar_200212v10.fits  -0.1021909714        2020-03-06 17:00:00
+
+
+2020-03-25 tm2_instpar_200212v12.fits (Glamer):
+----------------------------------------------
+tm2_instpar_200212v12.fits  -0.1021909714        2020-03-24 17:00:00
+
+
+2020-02-23 tm2_instpar_200212v11.fits (Glamer):
+----------------------------------------------
+
+corrected value in  CVSD0001  2020-02-12 15:00:00
+
+2020-02-23 tm4_instpar_200212v11.fits (Glamer):
+----------------------------------------------
+
+corrected value in  CVSD0001  2020-02-12 15:00:00
+
+
+tm<1-7>_instpar_100705v08 2020-02-21 (GLamer):
+---------------------------------------------- 
+
+new timelag values:  
+
+TM   filename                    timelag         validity start
+--------------------------------------------------------------------
+TM1: tm1_instpar_200212v09.fits  0.897809        2020-02-12 15:00:00
+TM2: tm2_instpar_200212v10.fits  0.897809        2020-02-12 15:00:00
+TM3: tm3_instpar_200212v10.fits  0.897809        2020-02-12 15:00:00
+TM4: tm4_instpar_200212v10.fits  0.897809        2020-02-12 15:00:00 
+TM5: tm5_instpar_200212v09.fits  0.897809        2020-02-12 15:00:00
+TM6: tm6_instpar_200213v09.fits  -0.10372657     2020-02-13 14:00:00    
+TM7: tm7_instpar_200213v10.fits  -0.10372657     2020-02-13 14:00:00
+
+
+
+
+tm7_instpar_100705v08 2020-02-10 (GLamer)
+---------------------------------------------- 
+
+tm7_instpar_200207v09.fits:
+  change timelag to -0.094338000 s
+
+tm6_instpar_200205v08 2020-02-10 (GLamer)
+----------------------------------------------
+
+tm6_instpar_200205v08.fits:
+  change timelag to +0.897809 s
+
+
+191211v09 - 2019-12-19 (GLamer)
+--------------------------------
+
+tm4_instpar_191211v09.fits:
+  change timelag=0.9095976 to timelag=-0.090402400
+
+
+100705v05 - 2019-09-20 (GLamer)
+--------------------------------
+
+tm1_instpar_100705v05.fits: 
+
+  apply boresight correction 
+
+
+100705v04 - 2019-09-05 (GLamer)
+--------------------------------
+
+tm7_instpar_100705v04.fits
+
+ apply platescale correction derived from TM5
+
+tm1_instpar_100705v04.fits: 
+
+  apply platescale correction derived from TM5
+ 
+
+
+tm5_instpar_100705v04.fits: 
+ Apply plate scale correction
+  
+ calibration performed with  eroday=43104 data
+
+100705v03 - 2019-09-05 (GLamer)
+--------------------------------
+
+tm5_instpar_100705v03.fits: 
+  applied boresight correction to  TM5, 
+  calibration performed with  eroday=43104 data 
+  reference is  GYRO attitude transformed using gyro_boresight_170630v04.fits
+
+ 
+
+100705v02 - 2017-02-21 (GLamer)
+--------------------------------
+
+Nominal pre-flight values
+
+100705v01 - 2014-04-24 (GLamer)
+--------------------------------
+
+
+

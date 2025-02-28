@@ -1,0 +1,14 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: avignet2
+
+Add new entries here:
+
+tmx_avignet2_010101v01 - 2020-05-04 (SF)
+--------------------------------
+New vignetting calibration for all TMs
+from K. Dennerl, J. Sanders
+
+

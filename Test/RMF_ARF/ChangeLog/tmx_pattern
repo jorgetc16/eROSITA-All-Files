@@ -1,0 +1,21 @@
+CALDB ChangeLog
+===============
+
+INSTRUMENT: tmx
+CAL_TYPE: pattern
+
+Add new entries here:
+
+2021-05-25 tm[1-7]_pattern_191023v02.fits (SF)
+----------------------------------------------
+correction of wrong keyword in the header of all CCFs files according to K. Dennerl
+
+2021-05-21 tm[1-7]_pattern_191023v01.fits (SF)
+----------------------------------------------
+including CCFs for pattern of all CEs according to K. Dennerl
+
+100602v01 - 2018-03-22 (creator)
+---------------------------------------------
+
+
+
