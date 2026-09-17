@@ -13,7 +13,7 @@ import sys
 import time
 from datetime import timedelta
 
-def pi2keV(pi, pimin=200, pimax=10000, emin=0.5, emax=10.0):
+def pi2keV(pi, pimin, pimax, emin=0.5, emax=10.0):
     m = (emin - emax) / (pimin - pimax)
     q = emin - m*pimin
     en = m*pi + q
@@ -106,19 +106,27 @@ rmf_emin = rmf_ebounds.field('E_MIN')
 rmf_emax = rmf_ebounds.field('E_MAX') 
 rmf_ebinedges = np.append(rmf_emin, rmf_emax[-1])
 
+Energy_1 = ((rmf_ebinedges[1:]+rmf_ebinedges[:-1])/2)
+
+binsizes = rmf_emax - rmf_emin
+
+#Remove the energies below 0.5 keV
+# Energy_final = Energy_1[Energy_1 > 0.5]
+# binsizes = binsizes[Energy_1 > 0.5]
+
 ######################################################################################################################################################################################################################################################
 ######################################################################################################################################################################################################################################################
 ######################################################################################################################################################################################################################################################
 
-EXPOSURE_FILE = "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/expmap_srcreg_comb_LMC_rad3deg_rebin40.fits"
+EXPOSURE_FILE = "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/expmap_srcreg_comb_LMC_radhalfdeg_rebin40.fits"
 #EXPOSURE_FILE = "/Users/marcotaoso/Documents/2024/eROSITA/testSculpt/Data/expmap_comb_Sculpt_rebin40_1-10keV.fits"
 
 
-SELREG_IMAGE_FILE = "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/image_fromselreg_comb_LMC_rad3deg_rebin40.fits"
+SELREG_IMAGE_FILE = "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/image_fromselreg_comb_LMC_radhalfdeg_rebin40.fits"
 #SELREG_IMAGE_FILE = "/Users/marcotaoso/Documents/2024/eROSITA/testSculpt/Data/image_comb_Sculpt_rebin40_1-10keV.fits"
 
 
-DeltaOmega=2*np.pi*(1-np.cos(3*np.pi/180.)) #LMC
+DeltaOmega=2*np.pi*(1-np.cos(0.5*np.pi/180.)) #LMC
 #DeltaOmega=2*np.pi*(1-np.cos(2*np.pi/180.)) #sculpt
 
 
@@ -216,9 +224,6 @@ print("exposure spline ",pixel_value)
 RA = []
 DEC = []
 PI = []
-RA = []
-DEC = []
-PI = []
 # DEADC = 0.99
 hdu = fits.open(SELREG_IMAGE_FILE)['EVENTS']
 data = hdu.data
@@ -243,7 +248,7 @@ mask = (RA != 0.0) & (DEC != 0.0)
 RA = RA[mask]
 DEC = DEC[mask]
 PI = PI[mask]
-ENERGY = pi2keV(PI)
+ENERGY = pi2keV(PI,min(PI),max(PI))
 RAmin = np.min(RA)
 RAmax= np.max(RA)
 DECmin = np.min(DEC)
@@ -314,7 +319,7 @@ RA_new = remove_elements_by_indices(RA, mask_pointsrc)
 DEC_new = remove_elements_by_indices(DEC, mask_pointsrc)
 PI_new = remove_elements_by_indices(PI, mask_pointsrc)
 TM_new = remove_elements_by_indices(TM, mask_pointsrc)
-ENERGY_new = pi2keV(PI_new)
+ENERGY_new = pi2keV(PI_new,min(PI_new),max(PI_new))
 EXPOSURE_new = remove_elements_by_indices(EXPOSURE, mask_pointsrc)
 print("Events before masking ",len(RA))
 print("Events after masking ",RA_new.shape," ",ENERGY_new.shape," ",EXPOSURE_new.shape)
@@ -322,136 +327,136 @@ print("Total EXPOSURE NEW ",np.sum(EXPOSURE_new))
 print("EXPOSURE NEW Min Max",np.min(EXPOSURE_new)," ",np.max(EXPOSURE_new))
 
 ############################### Separation in different telescopes ###############################
-mask_tm1 = (TM_new == 1)
-mask_tm2 = (TM_new == 2)
-mask_tm3 = (TM_new == 3)
-mask_tm4 = (TM_new == 4)
-mask_tm5 = (TM_new == 5)
-mask_tm6 = (TM_new == 6)
-mask_tm7 = (TM_new == 7)
-MEAN_EXPOSURE_TM1 = np.mean(EXPOSURE_new[mask_tm1])/7
-MEAN_EXPOSURE_TM2 = np.mean(EXPOSURE_new[mask_tm2])/7
-MEAN_EXPOSURE_TM3 = np.mean(EXPOSURE_new[mask_tm3])/7
-MEAN_EXPOSURE_TM4 = np.mean(EXPOSURE_new[mask_tm4])/7
-MEAN_EXPOSURE_TM5 = np.mean(EXPOSURE_new[mask_tm5])/7
-MEAN_EXPOSURE_TM6 = np.mean(EXPOSURE_new[mask_tm6])/7
-MEAN_EXPOSURE_TM7 = np.mean(EXPOSURE_new[mask_tm7])/7
-print('MEAN EXPOSURE', MEAN_EXPOSURE_TM1)
+# mask_tm1 = (TM_new == 1)
+# mask_tm2 = (TM_new == 2)
+# mask_tm3 = (TM_new == 3)
+# mask_tm4 = (TM_new == 4)
+# mask_tm5 = (TM_new == 5)
+# mask_tm6 = (TM_new == 6)
+# mask_tm7 = (TM_new == 7)
+# MEAN_EXPOSURE_TM1 = np.mean(EXPOSURE_new[mask_tm1])/7
+# MEAN_EXPOSURE_TM2 = np.mean(EXPOSURE_new[mask_tm2])/7
+# MEAN_EXPOSURE_TM3 = np.mean(EXPOSURE_new[mask_tm3])/7
+# MEAN_EXPOSURE_TM4 = np.mean(EXPOSURE_new[mask_tm4])/7
+# MEAN_EXPOSURE_TM5 = np.mean(EXPOSURE_new[mask_tm5])/7
+# MEAN_EXPOSURE_TM6 = np.mean(EXPOSURE_new[mask_tm6])/7
+# MEAN_EXPOSURE_TM7 = np.mean(EXPOSURE_new[mask_tm7])/7
+# print('MEAN EXPOSURE', MEAN_EXPOSURE_TM1)
 
-print('NUM OF BINS:', len(rmf_ebinedges), rmf_channel)
-cnt1, cnt1_xedges = np.histogram(ENERGY_new[mask_tm1], bins=rmf_ebinedges) #980 (9800 channels)
-h1, h1_xedges = np.histogram(ENERGY_new[mask_tm1], weights=1/EXPOSURE_new[mask_tm1]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h1_x = ((h1_xedges[1:]+h1_xedges[:-1])/2).astype('int')
-cnt2, cnt2_xedges = np.histogram(ENERGY_new[mask_tm2], bins=rmf_ebinedges) #980 (9800 channels)
-h2, h2_xedges = np.histogram(ENERGY_new[mask_tm2], weights=1/EXPOSURE_new[mask_tm2]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h2_x = ((h2_xedges[1:]+h2_xedges[:-1])/2).astype('int')
-cnt3, cnt3_xedges = np.histogram(ENERGY_new[mask_tm3], bins=rmf_ebinedges) #980 (9800 channels)
-h3, h3_xedges = np.histogram(ENERGY_new[mask_tm3], weights=1/EXPOSURE_new[mask_tm3]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h3_x = ((h3_xedges[1:]+h3_xedges[:-1])/2).astype('int')
-cnt4, cnt4_xedges = np.histogram(ENERGY_new[mask_tm4], bins=rmf_ebinedges) #980 (9800 channels)
-h4, h4_xedges = np.histogram(ENERGY_new[mask_tm4], weights=1/EXPOSURE_new[mask_tm4]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h4_x = ((h4_xedges[1:]+h4_xedges[:-1])/2).astype('int')
-cnt5, cnt5_xedges = np.histogram(ENERGY_new[mask_tm5], bins=rmf_ebinedges) #980 (9800 channels)
-h5, h5_xedges = np.histogram(ENERGY_new[mask_tm5], weights=1/EXPOSURE_new[mask_tm5]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h5_x = ((h5_xedges[1:]+h5_xedges[:-1])/2).astype('int')
-cnt6, cnt6_xedges = np.histogram(ENERGY_new[mask_tm6], bins=rmf_ebinedges) #980 (9800 channels)
-h6, h6_xedges = np.histogram(ENERGY_new[mask_tm6], weights=1/EXPOSURE_new[mask_tm6]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h6_x = ((h6_xedges[1:]+h6_xedges[:-1])/2).astype('int')
-cnt7, cnt7_xedges = np.histogram(ENERGY_new[mask_tm7], bins=rmf_ebinedges) #980 (9800 channels)
-h7, h7_xedges = np.histogram(ENERGY_new[mask_tm7], weights=1/EXPOSURE_new[mask_tm7]/7, bins=rmf_ebinedges) #980 (9800 channels)
-h7_x = ((h5_xedges[1:]+h5_xedges[:-1])/2).astype('int')
+# print('NUM OF BINS:', len(rmf_ebinedges), rmf_channel)
+# cnt1, cnt1_xedges = np.histogram(ENERGY_new[mask_tm1], bins=rmf_ebinedges) #980 (9800 channels)
+# h1, h1_xedges = np.histogram(ENERGY_new[mask_tm1], weights=1/EXPOSURE_new[mask_tm1]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h1_x = ((h1_xedges[1:]+h1_xedges[:-1])/2).astype('int')
+# cnt2, cnt2_xedges = np.histogram(ENERGY_new[mask_tm2], bins=rmf_ebinedges) #980 (9800 channels)
+# h2, h2_xedges = np.histogram(ENERGY_new[mask_tm2], weights=1/EXPOSURE_new[mask_tm2]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h2_x = ((h2_xedges[1:]+h2_xedges[:-1])/2).astype('int')
+# cnt3, cnt3_xedges = np.histogram(ENERGY_new[mask_tm3], bins=rmf_ebinedges) #980 (9800 channels)
+# h3, h3_xedges = np.histogram(ENERGY_new[mask_tm3], weights=1/EXPOSURE_new[mask_tm3]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h3_x = ((h3_xedges[1:]+h3_xedges[:-1])/2).astype('int')
+# cnt4, cnt4_xedges = np.histogram(ENERGY_new[mask_tm4], bins=rmf_ebinedges) #980 (9800 channels)
+# h4, h4_xedges = np.histogram(ENERGY_new[mask_tm4], weights=1/EXPOSURE_new[mask_tm4]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h4_x = ((h4_xedges[1:]+h4_xedges[:-1])/2).astype('int')
+# cnt5, cnt5_xedges = np.histogram(ENERGY_new[mask_tm5], bins=rmf_ebinedges) #980 (9800 channels)
+# h5, h5_xedges = np.histogram(ENERGY_new[mask_tm5], weights=1/EXPOSURE_new[mask_tm5]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h5_x = ((h5_xedges[1:]+h5_xedges[:-1])/2).astype('int')
+# cnt6, cnt6_xedges = np.histogram(ENERGY_new[mask_tm6], bins=rmf_ebinedges) #980 (9800 channels)
+# h6, h6_xedges = np.histogram(ENERGY_new[mask_tm6], weights=1/EXPOSURE_new[mask_tm6]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h6_x = ((h6_xedges[1:]+h6_xedges[:-1])/2).astype('int')
+# cnt7, cnt7_xedges = np.histogram(ENERGY_new[mask_tm7], bins=rmf_ebinedges) #980 (9800 channels)
+# h7, h7_xedges = np.histogram(ENERGY_new[mask_tm7], weights=1/EXPOSURE_new[mask_tm7]/7, bins=rmf_ebinedges) #980 (9800 channels)
+# h7_x = ((h5_xedges[1:]+h5_xedges[:-1])/2).astype('int')
 
 
-channel_TMs = [np.arange(1, 1025),
-               np.arange(1, 1025),
-               np.arange(1, 1025),
-               np.arange(1, 1025),
-               np.arange(1, 1025),
-               np.arange(1, 1025),
-               np.arange(1, 1025)]
+# channel_TMs = [np.arange(1, 1025),
+#                np.arange(1, 1025),
+#                np.arange(1, 1025),
+#                np.arange(1, 1025),
+#                np.arange(1, 1025),
+#                np.arange(1, 1025),
+#                np.arange(1, 1025)]
 
-rate_TMs    = [cnt1/MEAN_EXPOSURE_TM1,
-               cnt2/MEAN_EXPOSURE_TM2,
-               cnt3/MEAN_EXPOSURE_TM3,
-               cnt4/MEAN_EXPOSURE_TM4,
-               cnt5/MEAN_EXPOSURE_TM5,
-               cnt6/MEAN_EXPOSURE_TM6,
-               cnt7/MEAN_EXPOSURE_TM7]
+# rate_TMs    = [cnt1/MEAN_EXPOSURE_TM1,
+#                cnt2/MEAN_EXPOSURE_TM2,
+#                cnt3/MEAN_EXPOSURE_TM3,
+#                cnt4/MEAN_EXPOSURE_TM4,
+#                cnt5/MEAN_EXPOSURE_TM5,
+#                cnt6/MEAN_EXPOSURE_TM6,
+#                cnt7/MEAN_EXPOSURE_TM7]
 
-kk = 1
-error_TMs   = [np.sqrt(cnt1)/MEAN_EXPOSURE_TM1*kk,
-               np.sqrt(cnt2)/MEAN_EXPOSURE_TM2*kk,
-               np.sqrt(cnt3)/MEAN_EXPOSURE_TM3*kk,
-               np.sqrt(cnt4)/MEAN_EXPOSURE_TM4*kk,
-               np.sqrt(cnt5)/MEAN_EXPOSURE_TM5*kk,
-               np.sqrt(cnt6)/MEAN_EXPOSURE_TM6*kk,
-               np.sqrt(cnt7)/MEAN_EXPOSURE_TM7*kk,
-               ]
+# kk = 1
+# error_TMs   = [np.sqrt(cnt1)/MEAN_EXPOSURE_TM1*kk,
+#                np.sqrt(cnt2)/MEAN_EXPOSURE_TM2*kk,
+#                np.sqrt(cnt3)/MEAN_EXPOSURE_TM3*kk,
+#                np.sqrt(cnt4)/MEAN_EXPOSURE_TM4*kk,
+#                np.sqrt(cnt5)/MEAN_EXPOSURE_TM5*kk,
+#                np.sqrt(cnt6)/MEAN_EXPOSURE_TM6*kk,
+#                np.sqrt(cnt7)/MEAN_EXPOSURE_TM7*kk,
+#                ]
                
-plt.figure()
-plt.errorbar(channel_TMs[0], rate_TMs[0], fmt='.', yerr = error_TMs[0], label='TM 1')
-plt.errorbar(channel_TMs[1], rate_TMs[1], fmt='.', yerr = error_TMs[1], label='TM 2')
-plt.errorbar(channel_TMs[2], rate_TMs[2], fmt='.', yerr = error_TMs[2], label='TM 3')
-plt.errorbar(channel_TMs[3], rate_TMs[3], fmt='.', yerr = error_TMs[3], label='TM 4')
-plt.errorbar(channel_TMs[4], rate_TMs[4], fmt='.', yerr = error_TMs[4], label='TM 5')
-plt.errorbar(channel_TMs[5], rate_TMs[5], fmt='.', yerr = error_TMs[5], label='TM 6')
-plt.errorbar(channel_TMs[6], rate_TMs[6], fmt='.', yerr = error_TMs[6], label='TM 7')
-plt.errorbar(channel_TMs[6], rate_TMs[6]+rate_TMs[5]+rate_TMs[4]+rate_TMs[3] + rate_TMs[2] + rate_TMs[1] + rate_TMs[0], fmt='.', yerr = error_TMs[6], label='Sum Total')
+# plt.figure()
+# plt.errorbar(channel_TMs[0], rate_TMs[0], fmt='.', yerr = error_TMs[0], label='TM 1')
+# plt.errorbar(channel_TMs[1], rate_TMs[1], fmt='.', yerr = error_TMs[1], label='TM 2')
+# plt.errorbar(channel_TMs[2], rate_TMs[2], fmt='.', yerr = error_TMs[2], label='TM 3')
+# plt.errorbar(channel_TMs[3], rate_TMs[3], fmt='.', yerr = error_TMs[3], label='TM 4')
+# plt.errorbar(channel_TMs[4], rate_TMs[4], fmt='.', yerr = error_TMs[4], label='TM 5')
+# plt.errorbar(channel_TMs[5], rate_TMs[5], fmt='.', yerr = error_TMs[5], label='TM 6')
+# plt.errorbar(channel_TMs[6], rate_TMs[6], fmt='.', yerr = error_TMs[6], label='TM 7')
+# plt.errorbar(channel_TMs[6], rate_TMs[6]+rate_TMs[5]+rate_TMs[4]+rate_TMs[3] + rate_TMs[2] + rate_TMs[1] + rate_TMs[0], fmt='.', yerr = error_TMs[6], label='Sum Total')
 
-# plt.xlabel('Energy  (keV)', size=20)
-plt.xlabel('Channel (PI)', size=20)
-plt.ylabel(r'ph s$^{-1}$', size=20)
-plt.yscale('log')
-plt.legend(fontsize=15)
-plt.tight_layout()
+# # plt.xlabel('Energy  (keV)', size=20)
+# plt.xlabel('Channel (PI)', size=20)
+# plt.ylabel(r'ph s$^{-1}$', size=20)
+# plt.yscale('log')
+# plt.legend(fontsize=15)
+# plt.tight_layout()
 
 
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/RateSeparated_masked_backregNONE.pdf')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/RateSeparated_masked_backregNONE.pdf')
 
-plt.show()
+# # plt.show()
 
-fits_file = '/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/original_pha/ixpe02004701_det1_evt2_v02_src_pha1.fits'
+# fits_file = '/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/original_pha/ixpe02004701_det1_evt2_v02_src_pha1.fits'
 
-for i in range(0,7):
-    new_fits_file = '/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/TMSeparatedFiles/LMC_TM%i_pha_backregNONE.fits'%(i+1)
-    print(i, new_fits_file)
+# for i in range(0,7):
+#     new_fits_file = '/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/TMSeparatedFiles/LMC_TM%i_pha_backregNONE.fits'%(i+1)
+#     print(i, new_fits_file)
 
-    with fits.open(fits_file) as hdul:
-        # Access the relevant HDU (assuming it's the first HDU; change if needed)
-        hdu = hdul[1]
+#     with fits.open(fits_file) as hdul:
+#         # Access the relevant HDU (assuming it's the first HDU; change if needed)
+#         hdu = hdul[1]
 
-        num_rows = len(hdu.data)
-        new_data = np.zeros(1024, dtype=hdu.data.dtype)
-        new_ch = channel_TMs[i]
-        new_rt = rate_TMs[i]
-        new_re = error_TMs[i]
-        #  Update the new rows with the provided data
-        new_data['CHANNEL'] = channel_TMs[i]
-        new_data['RATE'] = rate_TMs[i]
-        new_data['STAT_ERR'] = error_TMs[i]
+#         num_rows = len(hdu.data)
+#         new_data = np.zeros(1024, dtype=hdu.data.dtype)
+#         new_ch = channel_TMs[i]
+#         new_rt = rate_TMs[i]
+#         new_re = error_TMs[i]
+#         #  Update the new rows with the provided data
+#         new_data['CHANNEL'] = channel_TMs[i]
+#         new_data['RATE'] = rate_TMs[i]
+#         new_data['STAT_ERR'] = error_TMs[i]
         
-        # Replace the HDU data with the new array
-        hdu.data = new_data
+#         # Replace the HDU data with the new array
+#         hdu.data = new_data
         
-        # Save the changes to a new file
-        hdul.writeto(new_fits_file, overwrite=True)
+#         # Save the changes to a new file
+#         hdul.writeto(new_fits_file, overwrite=True)
 
-    print(f"Updated columns and saved new file as {new_fits_file} successfully.")
+#     print(f"Updated columns and saved new file as {new_fits_file} successfully.")
 
-    fits.setval(new_fits_file, 'DETCHANS', value=1024, ext=1)
-    fits.setval(new_fits_file, 'TLMAX1', value=1024, ext=1)
-    fits.setval(new_fits_file, 'TLMIN1', value=1, ext=1)
-    fits.setval(new_fits_file, 'TELESCOP', value='eROSITA', ext=1)
-    fits.setval(new_fits_file, 'INSTRUME', value='CCD', ext=1)
-    fits.setval(new_fits_file, 'DETNAM', value='TM%i'%(i+1), ext=1)
-    fits.setval(new_fits_file, 'EXPOSURE', value=np.mean(EXPOSURE_new[mask_tm7])/7, ext=1)
-    fits.setval(new_fits_file, 'ONTIME', value=np.mean(EXPOSURE_new[mask_tm7])/7, ext=1)
-    fits.setval(new_fits_file, 'DEADC', value=1.1, ext=1)
-    fits.setval(new_fits_file, 'TSTART', value=6.294329108981885E8, ext=1)
-    fits.setval(new_fits_file, 'TSTOP', value=6.451919387333338E8, ext=1)
-    fits.setval(new_fits_file, 'MJDREF', value=51543.875, ext=1)
-    fits.setval(new_fits_file, 'TELAPSE', value=elapse_TMs[i], ext=1)
-    fits.setval(new_fits_file, 'DEADAPP', value=False, ext=1)
+#     fits.setval(new_fits_file, 'DETCHANS', value=1024, ext=1)
+#     fits.setval(new_fits_file, 'TLMAX1', value=1024, ext=1)
+#     fits.setval(new_fits_file, 'TLMIN1', value=1, ext=1)
+#     fits.setval(new_fits_file, 'TELESCOP', value='eROSITA', ext=1)
+#     fits.setval(new_fits_file, 'INSTRUME', value='CCD', ext=1)
+#     fits.setval(new_fits_file, 'DETNAM', value='TM%i'%(i+1), ext=1)
+#     fits.setval(new_fits_file, 'EXPOSURE', value=np.mean(EXPOSURE_new[mask_tm7])/7, ext=1)
+#     fits.setval(new_fits_file, 'ONTIME', value=np.mean(EXPOSURE_new[mask_tm7])/7, ext=1)
+#     fits.setval(new_fits_file, 'DEADC', value=1.1, ext=1)
+#     fits.setval(new_fits_file, 'TSTART', value=6.294329108981885E8, ext=1)
+#     fits.setval(new_fits_file, 'TSTOP', value=6.451919387333338E8, ext=1)
+#     fits.setval(new_fits_file, 'MJDREF', value=51543.875, ext=1)
+#     fits.setval(new_fits_file, 'TELAPSE', value=elapse_TMs[i], ext=1)
+#     fits.setval(new_fits_file, 'DEADAPP', value=False, ext=1)
 
 
 ###############################################################################################
@@ -459,12 +464,12 @@ for i in range(0,7):
 #https://erosita.mpe.mpg.de/edr/eROSITATechnical/calibration.html
 #FWHM from 50 eV (@lowest E) to 160 eV (@10keV)
 Nmap = 2000 # 6deg/30arcsec=1200
-NEbins = 300
+# NEbins = 950
 
-DeltaE = (np.max(ENERGY)-np.min(ENERGY))/NEbins
-DeltaE_new = (np.max(ENERGY_new)-np.min(ENERGY_new))/NEbins
-print("Min Max ENERGY  ",np.min(ENERGY)," ",np.max(ENERGY)," DeltaE ",DeltaE)
-print("Min Max ENERGY NEW ",np.min(ENERGY_new)," ",np.max(ENERGY_new)," DeltaE ",DeltaE_new)
+# DeltaE = (np.max(ENERGY)-np.min(ENERGY))/NEbins
+# DeltaE_new = (np.max(ENERGY_new)-np.min(ENERGY_new))/NEbins
+# print("Min Max ENERGY  ",np.min(ENERGY)," ",np.max(ENERGY)," DeltaE ",DeltaE)
+# print("Min Max ENERGY NEW ",np.min(ENERGY_new)," ",np.max(ENERGY_new)," DeltaE ",DeltaE_new)
 
 
 fig = plt.figure(figsize=(8,7))
@@ -476,7 +481,7 @@ plt.ylabel('DEC [deg]', size=20)
 plt.tick_params(axis='both', which='major', labelsize=15)
 plt.colorbar()
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Countmap_backregNONE.png')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Countmap_backregNONE.png')
 
 
 fig = plt.figure(figsize=(8,7))
@@ -488,10 +493,10 @@ plt.ylabel('DEC [deg]', size=20)
 plt.tick_params(axis='both', which='major', labelsize=15)
 plt.colorbar()
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Countmap_unmasked_backregNONE.png')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Countmap_unmasked_backregNONE.png')
 
-cnt1, cnt1_xedges = np.histogram(ENERGY, bins=NEbins)
-cnt2, cnt2_xedges = np.histogram(ENERGY_new, bins=NEbins)
+cnt1, cnt1_xedges = np.histogram(ENERGY, bins=rmf_ebinedges)
+cnt2, cnt2_xedges = np.histogram(ENERGY_new, bins=rmf_ebinedges)
 fig = plt.figure(figsize=(8,7))
 h1_x = (cnt1_xedges[1:]+cnt1_xedges[:-1])/2
 h2_x = (cnt2_xedges[1:]+cnt2_xedges[:-1])/2
@@ -503,7 +508,7 @@ plt.ylabel('cnt', size=18)
 plt.yscale('log')
 plt.legend(fontsize=15)
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Counts_backregNONE.pdf')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Counts_backregNONE.pdf')
 
 
 
@@ -516,7 +521,7 @@ plt.ylabel('DEC [deg]', size=20)
 plt.tick_params(axis='both', which='major', labelsize=15)
 plt.colorbar()
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Ratemap_backregNONE.png')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Ratemap_backregNONE.png')
 
 fig = plt.figure(figsize=(8,7))
 norm1 = mpl.colors.LogNorm()
@@ -527,13 +532,14 @@ plt.ylabel('DEC [deg]', size=20)
 plt.tick_params(axis='both', which='major', labelsize=15)
 plt.colorbar()
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Ratemap_unmasked_backregNONE.png')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Ratemap_unmasked_backregNONE.png')
 
 
 
+# print(len(EXPOSURE))
 
-h1, h1_xedges = np.histogram(ENERGY, weights=1/EXPOSURE, bins=NEbins)
-h2, h2_xedges = np.histogram(ENERGY_new, weights=1/EXPOSURE_new, bins=NEbins)
+h1, h1_xedges = np.histogram(ENERGY, weights=1/EXPOSURE, bins=rmf_ebinedges)
+h2, h2_xedges = np.histogram(ENERGY_new, weights=1/EXPOSURE_new, bins=rmf_ebinedges)
 h1_x = (h1_xedges[1:]+h1_xedges[:-1])/2
 h2_x = (h2_xedges[1:]+h2_xedges[:-1])/2
 plt.figure()
@@ -544,13 +550,13 @@ plt.ylabel('cnt/s', size=18)
 plt.yscale('log')
 plt.legend(fontsize=15)
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Rate_backregNONE.pdf')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Rate_backregNONE.pdf')
 
 #plt.show()
 
 
-np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/rate_masked_backregNONE.dat', list(zip(h2_xedges[:-1],h2_xedges[1:],h2,np.sqrt(cnt2)/np.mean(EXPOSURE_new))),fmt='%1.3f')
-np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/counts_masked_backregNONE.dat', list(zip(cnt2_xedges[:-1],cnt2_xedges[1:],cnt2 )),fmt='%1.3f')
+# np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/rate_masked_backregNONE.dat', list(zip(h2_xedges[:-1],h2_xedges[1:],h2,np.sqrt(cnt2)/np.mean(EXPOSURE_new))),fmt='%1.3f')
+# np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/counts_masked_backregNONE.dat', list(zip(cnt2_xedges[:-1],cnt2_xedges[1:],cnt2 )),fmt='%1.3f')
 
 
 
@@ -559,14 +565,14 @@ print("DeltaOmega [sr] ",DeltaOmega)
 ## Compute Aeff for each event
 #AeffENERGY=10**(np.interp(np.log10(ENERGY), np.log10(dataAeff[:,0]), np.log10(dataAeff[:,1]) ) )
 #AeffENERGY_new=10**(np.interp(np.log10(ENERGY_new), np.log10(dataAeff[:,0]), np.log10(dataAeff[:,1]) ) )
-flux = 1./(EXPOSURE*DeltaOmega*DeltaE)
-flux_new = 1./(EXPOSURE_new*DeltaOmega*DeltaE_new)
+flux = 1./(EXPOSURE*DeltaOmega)
+flux_new = 1./(EXPOSURE_new*DeltaOmega)
 norm1 = mpl.colors.LogNorm()
-hflux, hflux_xedges = np.histogram(ENERGY_new, weights=flux_new, bins=NEbins)
-hfluxerr, hfluxerr_xedges = np.histogram(ENERGY_new, weights=flux_new**2, bins=NEbins)
+hflux, hflux_xedges = np.histogram(ENERGY_new, weights=flux_new, bins=rmf_ebinedges)
+hfluxerr, hfluxerr_xedges = np.histogram(ENERGY_new, weights=flux_new**2, bins=rmf_ebinedges)
 hflux_x = (hflux_xedges[1:]+hflux_xedges[:-1])/2
-h2flux, h2flux_xedges = np.histogram(ENERGY, weights=flux, bins=NEbins)
-h2fluxerr, h2fluxerr_xedges = np.histogram(ENERGY, weights=flux**2, bins=NEbins)
+h2flux, h2flux_xedges = np.histogram(ENERGY, weights=flux, bins=rmf_ebinedges)
+h2fluxerr, h2fluxerr_xedges = np.histogram(ENERGY, weights=flux**2, bins=rmf_ebinedges)
 h2flux_x = (h2flux_xedges[1:]+h2flux_xedges[:-1])/2
 plt.figure()
 plt.errorbar(h2flux_x, h2flux, yerr = np.sqrt(h2fluxerr), label='w/ sources')
@@ -576,7 +582,8 @@ plt.ylabel('photons/s/keV/sr', size=18)
 plt.yscale('log')
 plt.legend(fontsize=15)
 plt.tight_layout()
-plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/Flux_backregNONE.pdf')
+# plt.savefig('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/Flux.pdf')
 
-np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/Results/flux_masked_backregNONE.dat', list(zip(hflux_xedges[:-1],hflux_xedges[1:],hflux,np.sqrt(hfluxerr))),fmt='%1.3f')
+# np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/flux_masked.dat', list(zip(hflux_xedges[:-1],hflux_xedges[1:],hflux,np.sqrt(hfluxerr))),fmt='%1.3f')
+np.savetxt('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_halfdeg_evtool/Results/flux_NOTmasked_q_corr.dat', list(zip(h2flux_xedges[:-1],h2flux_xedges[1:],h2flux,np.sqrt(h2fluxerr))),fmt='%1.3f')
 

@@ -1,5 +1,5 @@
 from astropy.io import fits
-import healpy as hp
+# import healpy as hp
 from matplotlib import rc
 import matplotlib.patheffects as path_effects
 from matplotlib import pyplot as plt
@@ -12,50 +12,50 @@ from xspec import *
 
 #arf1 = fits.open("/Users/marcotaoso/Documents/2024/eROSITA/FromMichela/Spectra_irfs_v3/tm1_arf_filter_000101v02.fits")
 #arf1.info()
-arf1test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_120_ARF_00001.fits")['SPECRESP']
+arf1test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_120_ARF_00001.fits")['SPECRESP']
 #print(arf1test.header)
 arf1ELOW = arf1test.data.field('ENERG_LO')#keV
 arf1EHI = arf1test.data.field('ENERG_HI')#keV
 arf1Aeff = arf1test.data.field('SPECRESP')#cm2
 arf1E = (arf1ELOW + arf1EHI)/2.
 
-arf2test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_220_ARF_00001.fits")['SPECRESP']
+arf2test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_220_ARF_00001.fits")['SPECRESP']
 arf2ELOW = arf2test.data.field('ENERG_LO')#keV
 arf2EHI = arf2test.data.field('ENERG_HI')#keV
 arf2Aeff = arf2test.data.field('SPECRESP')#cm2
 arf2E = (arf2ELOW + arf2EHI)/2.
 
-arf3test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_320_ARF_00001.fits")['SPECRESP']
+arf3test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_320_ARF_00001.fits")['SPECRESP']
 arf3ELOW = arf3test.data.field('ENERG_LO')#keV
 arf3EHI = arf3test.data.field('ENERG_HI')#keV
 arf3Aeff = arf3test.data.field('SPECRESP')#cm2
 arf3E = (arf3ELOW + arf3EHI)/2.
 
-arf4test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_420_ARF_00001.fits")['SPECRESP']
+arf4test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_420_ARF_00001.fits")['SPECRESP']
 arf4ELOW = arf4test.data.field('ENERG_LO')#keV
 arf4EHI = arf4test.data.field('ENERG_HI')#keV
 arf4Aeff = arf4test.data.field('SPECRESP')#cm2
 arf4E = (arf4ELOW + arf4EHI)/2.
 
-arf5test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_520_ARF_00001.fits")['SPECRESP']
+arf5test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_520_ARF_00001.fits")['SPECRESP']
 arf5ELOW = arf5test.data.field('ENERG_LO')#keV
 arf5EHI = arf5test.data.field('ENERG_HI')#keV
 arf5Aeff = arf5test.data.field('SPECRESP')#cm2
 arf5E = (arf5ELOW + arf5EHI)/2.
 
-arf6test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_620_ARF_00001.fits")['SPECRESP']
+arf6test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_620_ARF_00001.fits")['SPECRESP']
 arf6ELOW = arf6test.data.field('ENERG_LO')#keV
 arf6EHI = arf6test.data.field('ENERG_HI')#keV
 arf6Aeff = arf6test.data.field('SPECRESP')#cm2
 arf6E = (arf6ELOW + arf6EHI)/2.
 
-arf7test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_720_ARF_00001.fits")['SPECRESP']
+arf7test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_720_ARF_00001.fits")['SPECRESP']
 arf7ELOW = arf7test.data.field('ENERG_LO')#keV
 arf7EHI = arf7test.data.field('ENERG_HI')#keV
 arf7Aeff = arf7test.data.field('SPECRESP')#cm2
 arf7E = (arf7ELOW + arf7EHI)/2.
 
-arf0test = fits.open("/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_020_ARF_00001.fits")['SPECRESP']
+arf0test = fits.open("/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_020_ARF_00001.fits")['SPECRESP']
 arf0ELOW = arf0test.data.field('ENERG_LO')#keV
 arf0EHI = arf0test.data.field('ENERG_HI')#keV
 arf0Aeff = arf0test.data.field('SPECRESP')#cm2

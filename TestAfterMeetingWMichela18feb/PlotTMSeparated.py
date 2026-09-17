@@ -29,8 +29,8 @@ rmf_emin_1 = rmf_ebounds_1.field('E_MIN')
 rmf_emax_1 = rmf_ebounds_1.field('E_MAX') 
 rmf_ebinedges_1 = np.append(rmf_emin_1, rmf_emax_1[-1])
 
-print(rmf_emin_1, rmf_emax_1)
-exit()
+# print(rmf_emin_1, rmf_emax_1)
+# exit()
 Energy_1 = ((rmf_ebinedges_1[1:]+rmf_ebinedges_1[:-1])/2)
 
 binsizes = rmf_emax_1 - rmf_emin_1
@@ -38,7 +38,8 @@ binsizes = rmf_emax_1 - rmf_emin_1
 # exit()
 #compute the size of the energy bins
 
-DeltaOmega=2*np.pi*(1-np.cos(3*np.pi/180.)) #LMC
+DeltaOmega=1 #LMC
+# DeltaOmega=2*np.pi*(1-np.cos(3*np.pi/180.)) #LMC
 
 # rmf_ebounds_2 = fits.open(RMF_FILES[1])['EBOUNDS'].data
 # rmf_channel_2 = rmf_ebounds_2.field('CHANNEL')
@@ -59,13 +60,13 @@ DeltaOmega=2*np.pi*(1-np.cos(3*np.pi/180.)) #LMC
 
 # print(Energy_1, Energy_2, Energy_3)
 # exit()
-RATE_TMS_FILES_srctool = ["/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_120_SourceSpec_00001.fits",
-                "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_220_SourceSpec_00001.fits",
-                "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_320_SourceSpec_00001.fits",
-                "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_420_SourceSpec_00001.fits",
-                "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_520_SourceSpec_00001.fits",
-                "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_620_SourceSpec_00001.fits",
-                "/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMC_srctool_backregNONE/srctoolout_720_SourceSpec_00001.fits",
+RATE_TMS_FILES_srctool = ["/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_120_SourceSpec_00001.fits",
+                "/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_220_SourceSpec_00001.fits",
+                "/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_320_SourceSpec_00001.fits",
+                "/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_420_SourceSpec_00001.fits",
+                "/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_520_SourceSpec_00001.fits",
+                "/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_620_SourceSpec_00001.fits",
+                "/home/jortecal/GitHub/eRosita/LMC3Deg_JorgePC/srctoolout_000_SourceProducts_00001_cheesemask_circle_masked/srctoolout_720_SourceSpec_00001.fits",
                 ]
 
 RATE_TMS_FILES = ["/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/LMCFiles/TMSeparatedFiles/LMC_TM1_pha_backregNONE.fits",
@@ -136,26 +137,45 @@ stat_err_TMS_srctool =  [np.sqrt(fits.open(RATE_TMS_FILES_srctool[0])['SPECTRUM'
             np.sqrt(fits.open(RATE_TMS_FILES_srctool[5])['SPECTRUM'].data['COUNTS'])/exposuretime_srctool[5],
             np.sqrt(fits.open(RATE_TMS_FILES_srctool[6])['SPECTRUM'].data['COUNTS'])/exposuretime_srctool[6]]
 
+# Rebinning to equal log width bins, specifically 200 bins per decade.
+log_bins = np.logspace(np.log10(0.2), np.log10(12), num=200*int(np.log10(12/0.2))+1)
+bin_centers = np.sqrt(log_bins[:-1] * log_bins[1:])      # geometric centers for log bins
+bin_sizes = log_bins[1:] - log_bins[:-1]
 
+rate_TMS_rebinned = []
+stat_err_TMS_rebinned = []
+
+for i in range(len(rate_TMS_srctool)):
+    # sum values per log bin, then convert to density by dividing by bin width
+    rate_sum, _ = np.histogram(Energy_1, bins=log_bins, weights=rate_TMS_srctool[i])
+    var_sum,  _ = np.histogram(Energy_1, bins=log_bins, weights=stat_err_TMS_srctool[i]**2)
+    rate_TMS_rebinned.append(rate_sum / bin_sizes)
+    stat_err_TMS_rebinned.append(np.sqrt(var_sum) / bin_sizes)
+
+# Sanity check: shapes must match
+# print(len(bin_centers), rate_TMS_rebinned[0].shape, stat_err_TMS_rebinned[0].shape)
 
 plt.figure()
-plt.errorbar(Energy_1, rate_TMS[0]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[0], label='TM 1')
-plt.errorbar(Energy_1, rate_TMS[1]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[1], label='TM 2')
-plt.errorbar(Energy_1, rate_TMS[2]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[2], label='TM 3')
-plt.errorbar(Energy_1, rate_TMS[3]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[3], label='TM 4')
-plt.errorbar(Energy_1, rate_TMS[4]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[4], label='TM 5')
-plt.errorbar(Energy_1, rate_TMS[5]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[5], label='TM 6')
-plt.errorbar(Energy_1, rate_TMS[6]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[6], label='TM 7')
-plt.errorbar(Energy_1, rate_TMS[6]/binsizes/DeltaOmega+rate_TMS[5]/binsizes/DeltaOmega+rate_TMS[4]/binsizes/DeltaOmega+rate_TMS[3]/binsizes/DeltaOmega + rate_TMS[2]/binsizes/DeltaOmega + rate_TMS[1]/binsizes/DeltaOmega + rate_TMS[0]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS[0] +  stat_err_TMS[1] + stat_err_TMS[2] + stat_err_TMS[3] +  stat_err_TMS[4] + stat_err_TMS[5] + stat_err_TMS[6], label='Sum Total')
+# Use bin_centers as x, and do not divide by bin_sizes again
+plt.errorbar(bin_centers, rate_TMS_rebinned[0]/DeltaOmega,
+             yerr=stat_err_TMS_rebinned[0],
+             fmt='.', label='TM 1')
+# plt.errorbar(Energy_1, rate_TMS_srctool[1]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[1]/binsizes, label='TM 2')
+# plt.errorbar(Energy_1, rate_TMS_srctool[2]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[2]/binsizes, label='TM 3')
+# plt.errorbar(Energy_1, rate_TMS_srctool[3]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[3]/binsizes, label='TM 4')
+# plt.errorbar(Energy_1, rate_TMS_srctool[4]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[4]/binsizes, label='TM 5')
+# plt.errorbar(Energy_1, rate_TMS_srctool[5]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[5]/binsizes, label='TM 6')
+# plt.errorbar(Energy_1, rate_TMS_srctool[6]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[6]/binsizes, label='TM 7')
+# plt.errorbar(Energy_1, rate_TMS_srctool[6]/binsizes/DeltaOmega+rate_TMS_srctool[5]/binsizes/DeltaOmega+rate_TMS_srctool[4]/binsizes/DeltaOmega+rate_TMS_srctool[3]/binsizes/DeltaOmega + rate_TMS_srctool[2]/binsizes/DeltaOmega + rate_TMS_srctool[1]/binsizes/DeltaOmega + rate_TMS_srctool[0]/binsizes/DeltaOmega, fmt='.', yerr = stat_err_TMS_srctool[0]/binsizes +  stat_err_TMS_srctool[1]/binsizes + stat_err_TMS_srctool[2]/binsizes + stat_err_TMS_srctool[3]/binsizes +  stat_err_TMS_srctool[4]/binsizes + stat_err_TMS_srctool[5]/binsizes + stat_err_TMS_srctool[6]/binsizes, label='Sum Total')
 # plt.xlabel('Channel (PI)', size=20)
 plt.xlabel('Energy (keV)', size=20)
-plt.ylabel(r'ph s$^{-1}$ keV$^{-1}$ sr$^{-1}$', size=20)
+plt.ylabel(r'ph s$^{-1}$ keV$^{-1}$', size=20)
 plt.xlim(0.75, 11)
+plt.ylim(5e-4, 3)
 plt.xscale('log')
 plt.yscale('log')
 plt.legend(fontsize=15)
 plt.tight_layout()
-
 plt.show()
 
 

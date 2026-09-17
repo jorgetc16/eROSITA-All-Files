@@ -169,3 +169,58 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# === Large data files (astronomical data) ===
+*.fits
+*.fit
+*.fts
+*.h5
+*.hdf5
+*.h5py
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.root
+
+# === Generated archives ===
+*.zip
+*.tar.gz
+*.tar.xz
+*.tar
+*.gz
+*.bz2
+*.7z
+*.rar
+
+# === Generated figures/plots ===
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tiff
+*.tif
+*.bmp
+*.svg
+*.eps
+*.ps
+
+# === Analysis output files ===
+*.qdp
+*.out
+
+# === Data files (generated analysis output) ===
+*.csv
+*.dat
+*.tsv
+
+# === macOS / Windows OS files ===
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# === Vim backup files ===
+*.swp
+*.swo
+*~

@@ -1,0 +1,5 @@
+F_2 value: 0.0006108329517371099
+90% C.L. upper limit on F_2: 0.0013949825584958788
+-log(likelihood):           -log(likelihood)
+ogip_arf         150.43452
+total            150.43452

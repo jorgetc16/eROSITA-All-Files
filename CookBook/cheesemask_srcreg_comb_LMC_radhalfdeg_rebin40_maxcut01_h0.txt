@@ -1,0 +1,206 @@
+SIMPLE  =                    T / file does conform to FITS standard
+BITPIX  =                    8 / number of bits per data pixel
+NAXIS   =                    2 / number of data axes
+NAXIS1  =                 1808 / length of data axis 1
+NAXIS2  =                 1812 / length of data axis 2
+EXTEND  =                    T / FITS dataset may contain extensions
+COMMENT   FITS (Flexible Image Transport System) format is defined in 'Astronomy
+COMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H
+ORIGIN  = 'MPE     '           / Origin of FITS file
+CREATOR = 'ERBACKMA'           / Name and version of routine
+ERCONFIG= '        '           / Pipeline configuration
+ERVERS  = '        '           / File version
+ERPREFIX= '        '           / Standard products name prefix
+ERDSCODE= '        '           / Dataset code, codes telescope/filter/band
+ERDSTYPE= '        '           / Dataset type: EventFile, Image, etc.
+OWNER   = 'MPE     '           / EXPMERGE: MPE, IKI, or both
+MISSION = 'SRG     '           / Mission or test environment
+DATE    = '2025-03-26T10:11:04' / file creation date (YYYY-MM-DDThh:mm:ss UT)
+TELESCOP= 'eROSITA '           / Telescope / camera
+INSTRUME= 'merged  '
+NINST   =                    7
+INSTRUM1= 'TM1     '
+INSTRUM2= 'TM2     '
+INSTRUM3= 'TM3     '
+INSTRUM4= 'TM4     '
+INSTRUM5= 'TM5     '
+INSTRUM6= 'TM6     '
+INSTRUM7= 'TM7     '
+OBS_MODE= 'SURVEY  '           / EXPMERGE: SURVEY, POINTING, or SLEW
+DATAMODE= '        '           / Data mode
+FRAMETIM= 5.005840000000000E+01 / [ms] Nominal frame time
+FILTER  = 'FILTER  '           / EXPMERGE: Filter wheel position
+SKYFIELD= 'merged  '           / EXPMERGE: all-sky survey field number
+OBS_ID  = '        '           / Observation ID
+EXP_ID  = '        '           / Exposure ID
+OBSERVER= '        '           / Name of Observer
+OBJECT  = '        '           / Name of target of observation
+RA_OBJ  = 0.000000000000000E+00 / [deg] RA of target
+DEC_OBJ = 0.000000000000000E+00 / [deg] Dec of target
+RA_CEN  = 6.576923076923100E+01 / EXPMERGE: RA [deg] J2000 survey field center
+DEC_CEN = -6.601828116386200E+01 / EXPMERGE: DEC [deg] J2000 survey field center
+DATE-OBS= '2020-04-18T04:56:60' / Start Time (UTC) of exposure
+DATE-END= '2020-05-16T12:57:10' / End Time (UTC) of exposure
+TSTART  = 6.405118246264319E+08 / Start time of exp. in units of TIME col
+TSTOP   = 6.429598346558720E+08 / End time of exp. in units of TIME col
+MJDREF  = 5.154387500000000E+04 / [d] 2007-01-01T00:00:00 (=54101 MJD)
+TIMEZERO= 0.000000000000000E+00 / [s] Clock correction
+TIMEUNIT= 's       '           / Time unit
+TIMESYS = 'TT      '           / Time system (TT=Terrestial Time)
+RA_PNT  = 0.000000000000000E+00 / Actual (mean/median) pointing RA[deg] J2000
+DEC_PNT = 0.000000000000000E+00 / Actual (mean/median) pointing DEC[deg] J2000
+PA_PNT  = 0.000000000000000E+00 / Actual (mean/median) pointing pos angle
+RADECSYS= 'FK5     '           / Astrometric reference frame
+EQUINOX = 2.000000000000000E+03 / Equinox
+FLAGSEL =           -536809472 / Flag selection: 0xE000F000
+PAT_SEL =                   15 / Pattern selection (1=s,3=s+d,7=s+d+t)
+GTI_SEL = 'GTI     '           / GTI selection
+NENERGY =                    1 / Number of energy intervals (0 .. 9)
+EMIN1   = 5.000000000000000E-01 / lower boundary [keV] energy interval
+EMAX1   = 1.000000000000000E+01 / upper boundary [keV] energy interval
+TRANSMOD= '        '
+PAT_THR =                 -183 / general low energy threshold [adu]
+HDUCLASS= '        '           / Conforms to HEASARC/OGIP conventions
+HDUVERS = '1.0.0   '           / version of format
+HDUCLAS1= 'IMAGE   '
+HDUCLAS2= 'MASK    '
+SASSHIST= ' ****  **** DATE:Nov 24 04:09:00 2021 HOST:he4ero TASK:evprep v3.46&'
+CONTINUE  '.1/2.18 eROproc_201125 Nov 17 15:30:05 2021 PARAMS:eventfile_pp=/er&'
+CONTINUE  'o_archive/raw/fits/437/11/eROSITA/E__1_43711_000_P003.fits eventfil&'
+CONTINUE  'e=e_1_43711_003_c947.fits hkfile="/ero_archive/raw/fits/437/11/eROS&'
+CONTINUE  'ITA/H_HK11_1_43711_000_P003.fits /ero_archive/raw/fits/437/11/eROSI&'
+CONTINUE  'TA/H_HK12_1_43711_000_P003.fits /ero_archive/raw/fits/437/11/eROSIT&'
+CONTINUE  'A/H_HK13_1_43711_000_P003.fits /ero_archive/raw/fits/437/11/eROSITA&'
+CONTINUE  '/H_HK15_1_43711_000_P003.fits" sci_hk_a00=/ero_archive/raw/fits/437&'
+CONTINUE  '/11/eROSITA/H_SciHKA00_1_43711_000_P003.fits sci_hk_a05=/ero_archiv&'
+CONTINUE  'e/raw/fits/437/11/eROSITA/H_SciHKA05_1_43711_000_P003.fits sci_hk_a&'
+CONTINUE  '06=/ero_archive/raw/fits/437/11/eROSITA/H_SciHKA06_1_43711_000_P003&'
+CONTINUE  '.fits sci_hk_a9=/ero_archive/raw/fits/437/11/eROSITA/H_SciHKA9_1_43&'
+CONTINUE  '711_000_P003.fits sci_hk_aa=/ero_archive/raw/fits/437/11/eROSITA/H_&'
+CONTINUE  'SciHKAA_1_43711_000_P003.fits slow_hk=/ero_archive/raw/fits/437/11/&'
+CONTINUE  'eROSITA/H_HKSLOW_1_43711_000_P003.fits delete_bad=F correct_times=T&'
+CONTINUE  ' withdeadchopper=T clobber=T flag_space_invaders=T CALIB:tm1_timeof&'
+CONTINUE  'f_190701v01.fits tm1_thrscal_200119v01.fits tm1_detmap_100602v02.fi&'
+CONTINUE  'ts tm1_badcamt_190701v02.fits tm1_mipneigh_990101v01.fits ****  ***&'
+CONTINUE  '* DATE:Nov 24 06:16:14 2021 HOST:he4ero TASK:telselect v1.29/2.18 e&'
+CONTINUE  'ROproc_201125 Nov 17 15:32:42 2021 PARAMS:EVENTFILE=e_1_43711_003_c&'
+CONTINUE  '947.fits ****  **** DATE:Dec 11 14:34:18 2021 HOST:he6ero TASK:expm&'
+CONTINUE  'erge v1.28/2.18 eROproc_201125 Dec 10 15:13:37 2021 PARAMS:INPUT_CO&'
+CONTINUE  'NFIG=947 CONFIG=947 TYPE=c DATATYPE=srv OBSINT=11 BAND=1-14 restart&'
+CONTINUE  '=T testscan=F eday_start=43711 eday_stop=44806 ****  **** DATE:Dec &'
+CONTINUE  '11 15:01:27 2021 HOST:he6ero TASK:evtool v2.29.2/2.18 eROproc_20112&'
+CONTINUE  '5 Dec 10 14:43:38 2021 PARAMS:eventfiles="em01_066156_120_EventList&'
+CONTINUE  '_002_c947.fits em01_066156_220_EventList_002_c947.fits em01_066156_&'
+CONTINUE  '320_EventList_002_c947.fits em01_066156_420_EventList_002_c947.fits&'
+CONTINUE  ' em01_066156_520_EventList_002_c947.fits em01_066156_620_EventList_&'
+CONTINUE  '002_c947.fits em01_066156_720_EventList_002_c947.fits" outfile=em01&'
+CONTINUE  '_066156_020_EventList_002_c947.fits clobber=F events=T image=F size&'
+CONTINUE  '=3240 center_position=0 rebin=80 emin=0.20000000000000001 emax=10.0&'
+CONTINUE  '00000000000000 gti=GTI flag=0xE000F000 flag_invert=F pattern=15 raw&'
+CONTINUE  'xy=1 384 1 384 rawxy_telid=0 rawxy_invert=F memset=F overlap=2.0000&'
+CONTINUE  '000000000000 repair_gtis=F ****  **** DATE:Feb 19 12:34:36 2025 HOS&'
+CONTINUE  'T:to4dxl TASK:evtool 2.29.2.3 eSASS4DR1 feb 01 15:54:36 2024 PARAMS&'
+CONTINUE  ':eventfiles=@LMC_rad3deg_Event_List_1.txt outfile=events_comb_LMC.f&'
+CONTINUE  'its clobber=T events=T image=F size=3240 center_position=0 rebin=80&'
+CONTINUE  ' emin=0.0000000000000000 emax=0.0000000000000000 telid=0 region= gt&'
+CONTINUE  'i= flag= flag_invert=F pattern=0 rawxy= rawxy_telid=0 rawxy_invert=&'
+CONTINUE  'F memset=F overlap=2.0000000000000000 skyfield= repair_gtis=F **** &'
+CONTINUE  ' **** DATE:Mar  5 17:51:55 2025 HOST:to4dxl TASK:evtool 2.29.2.3 eS&'
+CONTINUE  'ASS4DR1 feb 01 15:54:36 2024 PARAMS:eventfiles=events_comb_LMC.fits&'
+CONTINUE  ' outfile=selreg_image_comb_LMC_radhalfdeg.fits clobber=T events=T i&'
+CONTINUE  'mage=F size=3240 center_position=0 rebin=80 emin=0.0000000000000000&'
+CONTINUE  ' emax=0.0000000000000000 telid=0 region=fk5;circle(80.89417, -69.75&'
+CONTINUE  '611,0.5) gti= flag= flag_invert=F pattern=0 rawxy= rawxy_telid=0 ra&'
+CONTINUE  'wxy_invert=F memset=F overlap=2.0000000000000000 skyfield= repair_g&'
+CONTINUE  'tis=F ****  **** DATE:Mar  5 17:53:11 2025 HOST:to4dxl TASK:evtool &'
+CONTINUE  '2.29.2.3 eSASS4DR1 feb 01 15:54:36 2024 PARAMS:eventfiles=selreg_im&'
+CONTINUE  'age_comb_LMC_radhalfdeg.fits outfile=image_fromselreg_comb_LMC_radh&'
+CONTINUE  'alfdeg_rebin40.fits clobber=T events=T image=T size=auto center_pos&'
+CONTINUE  'ition=auto rebin=40 emin=0.50000000000000000 emax=10.00000000000000&'
+CONTINUE  '0 telid=0 region= gti= flag= flag_invert=F pattern=0 rawxy= rawxy_t&'
+CONTINUE  'elid=0 rawxy_invert=F memset=F overlap=2.0000000000000000 skyfield=&'
+CONTINUE  ' repair_gtis=F ****  **** DATE:Mar  5 17:54:17 2025 HOST:to4dxl TAS&'
+CONTINUE  'K:expmap 2.11.5 eSASS4DR1 feb 01 15:54:37 2024 PARAMS:inputdatasets&'
+CONTINUE  '=selreg_image_comb_LMC_radhalfdeg.fits templateimage=image_fromselr&'
+CONTINUE  'eg_comb_LMC_radhalfdeg_rebin40.fits emin=0.500000000 emax=10.000000&'
+CONTINUE  '0 withmergedmaps=T withsinglemaps=F withvignetting=T withinputmaps=&'
+CONTINUE  'F withweights=T withdetmaps=F withfilebadpix=F gtitype=GTI accuracy&'
+CONTINUE  '=approximate plindex=-1.70000005 mergedmaps=expmap_srcreg_comb_LMC_&'
+CONTINUE  'radhalfdeg_rebin40.fits CALIB:tm1_detmap_100602v02.fits tm1_fovmap_&'
+CONTINUE  '190822v01.fits tm1_instpar_190701v15.fits tm1_arf_filter_000101v02.&'
+CONTINUE  'fits tm1_avignet2_010101v01.fits tm2_detmap_100602v02.fits tm2_fovm&'
+CONTINUE  'ap_190822v01.fits tm2_instpar_190701v15.fits tm2_arf_filter_000101v&'
+CONTINUE  '02.fits tm2_avignet2_010101v01.fits tm3_detmap_100602v02.fits tm3_f&'
+CONTINUE  'ovmap_190822v01.fits tm3_instpar_190701v15.fits tm3_arf_filter_0001&'
+CONTINUE  '01v02.fits tm3_avignet2_010101v01.fits tm4_detmap_100602v02.fits tm&'
+CONTINUE  '4_fovmap_190822v01.fits tm4_instpar_190701v15.fits tm4_arf_filter_0&'
+CONTINUE  '00101v02.fits tm4_avignet2_010101v01.fits tm5_detmap_100602v02.fits&'
+CONTINUE  ' tm5_fovmap_190822v01.fits tm5_instpar_190701v15.fits tm5_arf_filte&'
+CONTINUE  'r_000101v02.fits tm5_avignet2_010101v01.fits tm6_detmap_100602v02.f&'
+CONTINUE  'its tm6_fovmap_190822v01.fits tm6_instpar_190701v15.fits tm6_arf_fi&'
+CONTINUE  'lter_000101v02.fits tm6_avignet2_010101v01.fits tm7_detmap_100602v0&'
+CONTINUE  '2.fits tm7_fovmap_190822v01.fits tm7_instpar_190701v15.fits tm7_arf&'
+CONTINUE  '_filter_000101v02.fits tm7_avignet2_010101v01.fits ****  **** DATE:&'
+CONTINUE  'Mar 19 16:07:00 2025 HOST:to4dxl TASK:ermask 1.7.1 eSASS4DR1 feb 01&'
+CONTINUE  ' 15:54:43 2024 PARAMS:EXPIMAGE=expmap_srcreg_comb_LMC_radhalfdeg_re&'
+CONTINUE  'bin40.fits DETMASK=detmask_srcreg_comb_LMC_radhalfdeg_rebin40.fits &'
+CONTINUE  'THRESHOLD1=1.00000005E-03 THRESHOLD2=1.00000000 REGIONFILE_FLAG=F C&'
+CONTINUE  'LOBBER=F ****  **** DATE:Mar 26 11:10:49 2025 HOST:to4dxl TASK:erba&'
+CONTINUE  'ckmap 1.26.2 eSASS4DR1 feb 01 15:54:38 2024 PARAMS:IMAGE=image_from&'
+CONTINUE  'selreg_comb_LMC_radhalfdeg_rebin40.fits BOXLIST=boxlist_srcreg_comb&'
+CONTINUE  '_LMC_radhalfdeg_rebin40.fits BKGIMAGE=bkg_map_srcreg_comb_LMC_radha&'
+CONTINUE  'lfdeg_rebin40_maxcut01.fits IDBAND=1 SCUT=9.99999975E-05 MLMIN=0.00&'
+CONTINUE  '000000 MAXCUT=0.100000001 NSPLINENODES=36 DEGREE=2 SMOOTHFLAG=T SMO&'
+CONTINUE  'OTHVAL=15.0000000 SMOOTHMAX=360.000000 SNR=30.0000000 EXCESSSIGMA=1&'
+CONTINUE  '000.00000 NFITRUN=1 EMIN=500.000000 EMAX=10000.0000 FITMETHOD=smoot&'
+CONTINUE  'h EXPIMA_FLAG=T EXPIMA2_FLAG=F DETMASK_FLAG=T USERMASK_FLAG=F CLOBB&'
+CONTINUE  'ER=F CHEESEMASK_FLAG=T EXPIMAGE=expmap_srcreg_comb_LMC_radhalfdeg_r&'
+CONTINUE  'ebin40.fits EXPIMA2_FLAG=F DETMASK_FLAG=T DETMASK=detmask_srcreg_co&'
+CONTINUE  'mb_LMC_radhalfdeg_rebin40.fits CHEESEMASK=cheesemask_srcreg_comb_LM&'
+CONTINUE  'C_radhalfdeg_rebin40_maxcut01.fits CALIB:tm1_2dpsf_190220v03.fits'
+LONGSTRN= 'OGIP 1.0'           / Support multi-line COMMENT/HISTORY records
+REFXCTYP= 'MPE     '
+REFXCUNI= '        '
+REFXCRPX=            538976288
+REFXCRVL= 6.013470016999068E-154
+REFXCDLT= 6.013470016999068E-154
+REFXLMIN= 6.013470016999068E-154
+REFXDMAX= 6.013470016999068E-154
+REFYCTYP= '        '
+REFYCUNI= ' eROSITA'
+REFYCRPX=            538976288
+REFYCRVL= 0.000000000000000E+00
+REFYCDLT= 6.013470016999068E-154
+REFYLMIN= 6.013470016999068E-154
+REFYDMAX= 6.013470016999068E-154
+CTYPE1  = 'RA---SIN'           / WCS type: RA parallel projection
+CRPIX1  = 1.021541139004800E+04 / WCS X axis reference pixel
+DRPIX1  = 0.000000000000000E+00
+CRVAL1  = 6.576923100000000E+01 / RA at reference pixel
+CDELT1  = -5.555555638339600E-04 / X increment at reference pixel
+CUNIT1  = 'deg     '           / WCS physical unit of X axis
+DDELT1  = 0.000000000000000E+00
+CTYPE2  = 'DEC--SIN'           / WCS type: DEC parallel projection
+CRPIX2  = 8.758886420589701E+03 / WCS YY axis reference pixel
+DRPIX2  = 0.000000000000000E+00
+CRVAL2  = -6.601828100000000E+01 / DEC at reference pixel
+CDELT2  = 5.555555638339600E-04 / Y increment at reference pixel
+CUNIT2  = 'deg     '           / WCS physical unit of Y axis
+DDELT2  = 0.000000000000000E+00
+CROTA2  = 0.000000000000000E+00
+WCSNAMEP= 'PHYSICAL'
+WCSTY1P = 'PHYSICAL'
+CTYPE1P = 'X       '
+CRPIX1P = 9.045000000000000E+02
+CRVAL1P = -3.724364556019300E+05
+CDELT1P = 4.000000000000000E+01
+WCSTY2P = 'PHYSICAL'
+LTV1    = 0.000000000000000E+00
+LTM1_1  = 0.000000000000000E+00
+LTV2    = 0.000000000000000E+00
+LTM2_2  = 0.000000000000000E+00
+CTYPE2P = 'Y       '
+CRPIX2P = 9.065000000000000E+02
+CRVAL2P = -3.140954568235900E+05
+CDELT2P = 4.000000000000000E+01
+END

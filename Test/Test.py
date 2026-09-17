@@ -1,5 +1,4 @@
 from astropy.io import fits
-import healpy as hp
 from matplotlib import rc
 import matplotlib.patheffects as path_effects
 
@@ -10,12 +9,17 @@ rc('font', weight='bold')
 import matplotlib.pyplot as plt
 
 #  Load the FITS table
-hdul = fits.open('/home/jortecal/GitHub/eRosita/Test/events_comb_Sculptor_rad2deg.fits')
+hdul = fits.open('/home/jortecal/GitHub/eRosita/TestAfterMeetingWMichela18feb/CookBook/cheesemask_srcreg_comb_LMC_radhalfdeg_rebin40_maxcut01.fits')
 print(hdul.info())
 
+#Print the header of the fits file
+print(hdul[0].header)
+# Print the data of the fits file
 data = hdul[1].data
 print(data.columns)
-print(data['X'].size)
+# Print the data of the fits file
+exit()
+
 
 # plot a map of the image with y axis DEC in degress and x axis RA in degrees
 fig = plt.figure(figsize=(10, 10))

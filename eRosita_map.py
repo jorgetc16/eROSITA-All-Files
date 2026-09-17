@@ -1,35 +1,148 @@
-from astropy.io import fits
-import healpy as hp
-from matplotlib import rc
-import matplotlib.patheffects as path_effects
-
-rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
-rc('text', usetex=True)
-rc('font', weight='bold')
-
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+import numpy as np
+import matplotlib.patches as patches
+from matplotlib.path import Path
+from astroML.plotting import plot_tissot_ellipse
+from astropy.io import fits
+from astropy.wcs import WCS
+from astropy.table import Table
 
-# The header of the fits file is: XTENSION= 'BINTABLE'           / binary table extension                         BITPIX  =                    8 / 8-bit bytes                                    NAXIS   =                    2 / 2-dimensional binary table                     NAXIS1  =                   24 / width of table in bytes                        NAXIS2  =                 1024 / number of rows in table                        PCOUNT  =                    0 / size of special data area                      GCOUNT  =                    1 / one data group (required keyword)              TFIELDS =                    6 / number of fields in each row                   TTYPE1  = 'CHANNEL '           / label for field   1                            TFORM1  = 'J       '           / data format of field: 4-byte INTEGER           TTYPE2  = 'COUNTS  '           / label for field   2                            TFORM2  = 'J       '           / data format of field: 4-byte INTEGER           TUNIT2  = 'count   '           / physical unit of field                         TTYPE3  = 'COUNTS_P1'          / label for field   3                            TFORM3  = 'J       '           / data format of field: 4-byte INTEGER           TUNIT3  = 'count   '           / physical unit of field                         TTYPE4  = 'COUNTS_P2'          / label for field   4                            TFORM4  = 'J       '           / data format of field: 4-byte INTEGER           TUNIT4  = 'count   '           / physical unit of field                         TTYPE5  = 'COUNTS_P3'          / label for field   5                            TFORM5  = 'J       '           / data format of field: 4-byte INTEGER           TUNIT5  = 'count   '           / physical unit of field                         TTYPE6  = 'COUNTS_P4'          / label for field   6                            TFORM6  = 'J       '           / data format of field: 4-byte INTEGER           TUNIT6  = 'count   '           / physical unit of field                         EXTNAME = 'SPECTRUM'           / name of this binary table extension            LONGSTRN= 'OGIP 1.0'           / Uses OGIP long string convention               HDUCLASS= 'OGIP    '           / Conforms to HEASARC/OGIP conventions           HDUCLAS1= 'SPECTRUM'           / Standard OGIP keyword. Sub-class of format     HDUCLAS2= 'TOTAL   '           / Standard OGIP keyword. Sub-class of format     HDUCLAS3= 'COUNT   '           / Standard OGIP keyword. Sub-class of format     HDUVERS = '1.2.1   '           / version of format                              ORIGIN  = 'MPE     '           / Origin of FITS file                            CREATOR = '1.76.6 eSASS4DR1 feb 01 15:54:34 2024&'                              CONTINUE  ''                   / Software which created this file               OWNER   = 'MPE     '           / EXPMERGE: MPE, IKI, or both                    MISSION = 'SRG     '           / Mission or test environment                    TELESCOP= 'eROSITA '           / Telescope / camera                             INSTRUME= 'MERGED  '           / Instrument                                     OBS_MODE= 'SURVEY  '           / EXPMERGE: SURVEY, POINTING, or SLEW            DATAMODE= '        '           / Data mode                                      FRAMETIM=              50.0584 / [ms] Nominal frame time                        FILTER  = 'FILTER  '           / EXPMERGE: Filter wheel position                SKYFIELD= 'merged  '           / EXPMERGE: all-sky survey field number          OBS_ID  = '        '           / Observation ID                                 EXP_ID  = '        '           / Exposure ID                                    OBSERVER= '        '           / Name of Observer                               OBJECT  = '00001   '           / Name of target of observation                  RA_OBJ  =             80.89417 / [deg] RA of target                             DEC_OBJ =            -69.75611 / [deg] Dec of target                            RA_CEN  =          65.76923077 / EXPMERGE: RA [deg] J2000 survey field center   DEC_CEN =         -66.01828116 / EXPMERGE: DEC [deg] J2000 survey field center  DATE-OBS= '2019-12-11T23:28:26' / Start Time (UTC) of exposure                  DATE-END= '2020-06-11T08:58:54' / End Time (UTC) of exposure                    TSTART  =          641275014.3 / Start time of exp. in units of TIME col        TSTOP   =          642110223.2 / End time of exp. in units of TIME col          MJDREF  =            51543.875 / [d] 2007-01-01T00:00:00 (=54101 MJD)           TIMEZERO=                   0. / [s] Clock correction                           TIMEUNIT= 's       '           / Time unit                                      TIMESYS = 'TT      '           / Time system (TT=Terrestial Time)               RA_PNT  =                   0. / Actual (mean/median) pointing RA[deg] J2000    DEC_PNT =                   0. / Actual (mean/median) pointing DEC[deg] J2000   PA_PNT  =                   0. / Actual (mean/median) pointing pos angle        RADECSYS= 'ICRS    '           / Astrometric reference frame                    EQUINOX =                2000. / Equinox                                        NINST   =                    7 / Number of instruments that were merged         INSTRUM1= 'TM1     '           / Contributing instrument name                   INSTRUM2= 'TM2     '           / Contributing instrument name                   INSTRUM3= 'TM3     '           / Contributing instrument name                   INSTRUM4= 'TM4     '           / Contributing instrument name                   INSTRUM5= 'TM5     '           / Contributing instrument name                   INSTRUM6= 'TM6     '           / Contributing instrument name                   INSTRUM7= 'TM7     '           / Contributing instrument name                   DSCODE  = '120     '           / Dataset code, codes telescope/filter/band      DSTYPE  = 'SourceSpec'         / Dataset type: EventFile, Image, etc.           SASSHIST= ' ****  **** DATE:Nov 24 04:09:00 2021 HOST:he4ero TASK:evprep v3.46&'CONTINUE  '.1/2.18 eROproc_201125 Nov 17 15:30:05 2021 PARAMS:eventfile_pp=/er&'CONTINUE  'o_archive/raw/fits/437/11/eROSITA/E__1_43711_000_P003.fits eventfil&'CONTINUE  'e=e_1_43711_003_c947.fits hkfile="/ero_archive/raw/fits/437/11/eROS&'CONTINUE  'ITA/H_HK11_1_43711_000_P003.fits /ero_archive/raw/fits/437/11/eROSI&'CONTINUE  'TA/H_HK12_1_43711_000_P003.fits /ero_archive/raw/fits/437/11/eROSIT&'CONTINUE  'A/H_HK13_1_43711_000_P003.fits /ero_archive/raw/fits/437/11/eROSITA&'CONTINUE  '/H_HK15_1_43711_000_P003.fits" sci_hk_a00=/ero_archive/raw/fits/437&'CONTINUE  '/11/eROSITA/H_SciHKA00_1_43711_000_P003.fits sci_hk_a05=/ero_archiv&'CONTINUE  'e/raw/fits/437/11/eROSITA/H_SciHKA05_1_43711_000_P003.fits sci_hk_a&'CONTINUE  '06=/ero_archive/raw/fits/437/11/eROSITA/H_SciHKA06_1_43711_000_P003&'CONTINUE  '.fits sci_hk_a9=/ero_archive/raw/fits/437/11/eROSITA/H_SciHKA9_1_43&'CONTINUE  '711_000_P003.fits sci_hk_aa=/ero_archive/raw/fits/437/11/eROSITA/H_&'CONTINUE  'SciHKAA_1_43711_000_P003.fits slow_hk=/ero_archive/raw/fits/437/11/&'CONTINUE  'eROSITA/H_HKSLOW_1_43711_000_P003.fits delete_bad=F correct_times=T&'CONTINUE  ' withdeadchopper=T clobber=T flag_space_invaders=T CALIB:tm1_timeof&'CONTINUE  'f_190701v01.fits tm1_thrscal_200119v01.fits tm1_detmap_100602v02.fi&'CONTINUE  'ts tm1_badcamt_190701v02.fits tm1_mipneigh_990101v01.fits ****  ***&'CONTINUE  '* DATE:Nov 24 06:16:14 2021 HOST:he4ero TASK:telselect v1.29/2.18 e&'CONTINUE  'ROproc_201125 Nov 17 15:32:42 2021 PARAMS:EVENTFILE=e_1_43711_003_c&'CONTINUE  '947.fits ****  **** DATE:Dec 11 14:34:18 2021 HOST:he6ero TASK:expm&'CONTINUE  'erge v1.28/2.18 eROproc_201125 Dec 10 15:13:37 2021 PARAMS:INPUT_CO&'CONTINUE  'NFIG=947 CONFIG=947 TYPE=c DATATYPE=srv OBSINT=11 BAND=1-14 restart&'CONTINUE  '=T testscan=F eday_start=43711 eday_stop=44806 ****  **** DATE:Dec &'CONTINUE  '11 15:01:27 2021 HOST:he6ero TASK:evtool v2.29.2/2.18 eROproc_20112&'CONTINUE  '5 Dec 10 14:43:38 2021 PARAMS:eventfiles="em01_066156_120_EventList&'CONTINUE  '_002_c947.fits em01_066156_220_EventList_002_c947.fits em01_066156_&'CONTINUE  '320_EventList_002_c947.fits em01_066156_420_EventList_002_c947.fits&'CONTINUE  ' em01_066156_520_EventList_002_c947.fits em01_066156_620_EventList_&'CONTINUE  '002_c947.fits em01_066156_720_EventList_002_c947.fits" outfile=em01&'CONTINUE  '_066156_020_EventList_002_c947.fits clobber=F events=T image=F size&'CONTINUE  '=3240 center_position=0 rebin=80 emin=0.20000000000000001 emax=10.0&'CONTINUE  '00000000000000 gti=GTI flag=0xE000F000 flag_invert=F pattern=15 raw&'CONTINUE  'xy=1 384 1 384 rawxy_telid=0 rawxy_invert=F memset=F overlap=2.0000&'CONTINUE  '000000000000 repair_gtis=F ****  **** DATE:Jan 30 16:35:53 2025 HOS&'CONTINUE  'T:to4dxl TASK:evtool 2.29.2.3 eSASS4DR1 feb 01 15:54:36 2024 PARAMS&'CONTINUE  ':eventfiles=@LMC_rad3deg_Event_List_1.txt outfile=events_comb_LMC_r&'CONTINUE  'ad3deg.fits clobber=T events=T image=F size=3240 center_position=0 &'CONTINUE  'rebin=80 emin=0.0000000000000000 emax=0.0000000000000000 telid=0 re&'CONTINUE  'gion= gti= flag= flag_invert=F pattern=0 rawxy= rawxy_telid=0 rawxy&'CONTINUE  '_invert=F memset=F overlap=2.0000000000000000 skyfield= repair_gtis&'CONTINUE  '=F **** DATE:Feb 14 10:45:36 2025 HOST:to4dxl TASK:srctool 1.76.6 e&'CONTINUE  'SASS4DR1 feb 01 15:54:34 2024 PARAMS:eventfiles=events_comb_LMC_rad&'CONTINUE  '3deg.fits srccoord=fk5;80.89417,-69.75611 prefix=srctoolout_ suffix&'CONTINUE  '= todo="SPEC ARF RMF" insts="1 2 3 4 5 6 7" writeinsts="0 1 2 3 4 5&'CONTINUE  ' 6 7 8 9" srcreg=circle  * * 0.01d backreg=annulus * * 0.02d 0.04d &'CONTINUE  'exttype=TOPHAT extpars=10800.000000000000 extmap= lctype=REGULAR- l&'CONTINUE  'cpars=10.000000000000000 lcemin="0.50000000000000000 2.000000000000&'CONTINUE  '0000" lcemax="2.0000000000000000 10.000000000000000" lcgamma=2.0000&'CONTINUE  '000000000000 tstep=5.0000000000000003E-002 xgrid="1.000000000000000&'CONTINUE  '0 2.0000000000000000" gtitype=GTI psftype=NONE pat_sel=15 flagsel=0&'CONTINUE  ' pat_sel=15 outsrcreg=none outbackreg=none continue_on_error=F tarb&'CONTINUE  'all=no tartmpdir=none clobber=F CALIB:tm1_detmap_100602v02.fits tm2&'CONTINUE  '_detmap_100602v02.fits tm3_detmap_100602v02.fits tm4_detmap_100602v&'CONTINUE  '02.fits tm5_detmap_100602v02.fits tm6_detmap_100602v02.fits tm7_det&'CONTINUE  'map_100602v02.fits tm1_instpar_190701v15.fits tm2_instpar_190701v15&'CONTINUE  '.fits tm3_instpar_190701v15.fits tm4_instpar_190701v15.fits tm5_ins&'CONTINUE  'tpar_190701v15.fits tm6_instpar_190701v15.fits tm7_instpar_190701v1&'CONTINUE  '5.fits tm1_arf_filter_000101v02.fits tm2_arf_filter_000101v02.fits &'CONTINUE  'tm3_arf_filter_000101v02.fits tm4_arf_filter_000101v02.fits tm5_arf&'CONTINUE  '_filter_000101v02.fits tm6_arf_filter_000101v02.fits tm7_arf_filter&'CONTINUE  '_000101v02.fits tm1_rmf_141103v02.fits tm2_rmf_141103v02.fits tm3_r&'CONTINUE  'mf_141103v02.fits tm4_rmf_141103v02.fits tm5_rmf_141103v02.fits tm6&'CONTINUE  '_rmf_141103v02.fits tm7_rmf_141103v02.fits tm1_rmf_141103v01.fits t&'CONTINUE  'm2_rmf_141103v01.fits tm3_rmf_141103v01.fits tm4_rmf_141103v01.fits&'CONTINUE  ' tm5_rmf_141103v01.fits tm6_rmf_141103v01.fits tm7_rmf_141103v01.fi&'CONTINUE  'ts tm1_avignet2_010101v01.fits tm2_avignet2_010101v01.fits tm3_avig&'CONTINUE  'net2_010101v01.fits tm4_avignet2_010101v01.fits tm5_avignet2_010101&'CONTINUE  'v01.fits tm6_avignet2_010101v01.fits tm7_avignet2_010101v01.fits&'   CONTINUE  ''                   / History of SASS processing                     TELAPSE =          1821.979352 / [s] Total observation duration                 ONTIME  =          1821.979352 / [s] On-target exposure time (pre deadtime corr)LIVETIME=          1818.734852 / [s] On-target active-detector exposure time    EXPOSURE=          1818.734852 / [s] Fully corrected effective exposure time    BACKFILE= 'srctoolout_020_BackgrSpec_00001.fits&'                               CONTINUE  '&'                  / [filename] Name of the corresponding backgroundCONTINUE  ''                   /  spec file                                     CORRFILE= 'NONE    '           / [filename] Name of the corresponding correctionCORRSCAL=                   1. / [factor] The correction scaling factor         RESPFILE= 'srctoolout_020_RMF_00001.fits&'                                      CONTINUE  '&'                  / [filename] Name of the corresponding response mCONTINUE  ''                   / atrix                                          ANCRFILE= 'srctoolout_020_ARF_00001.fits&'                                      CONTINUE  '&'                  / [filename] Name of the corresponding ancillary CONTINUE  ''                   / response file                                  POISSERR=                    T / [bool] Are Poisson errors appropriate?         CHANTYPE= 'PI      '           / Have pulse height corrections been applied?    DETCHANS=                 1024 / Total number of detector channels              AREASCAL=                   1. / [factor] Factor used when scaling the backgrounBACKSCAL=      0.0003024180421 / [deg^2] Factor used when scaling the backgroundREGAREA =      0.0003151808459 / [deg^2] Geometric area of region               RGMDAREA=      0.0003151808459 / [deg^2] Geom. area of region where src. model>0CTS     =                   34 / Number of counts - all patterns                CNTS_S  =                   12 / Number of counts - singles                     CNTS_D  =                   16 / Number of counts - doubles                     CNTS_T  =                    4 / Number of counts - triples                     CNTS_Q  =                    2 / Number of counts - quadruples                  FLAGSEL =           -536809472 / Flag selection: 0xE000F000                     PAT_SEL =                   15 / Pattern selection (1=s,3=s+d,7=s+d+t)          SRC_REG = 'ICRS;circle 80.894170000 -69.756110000 1.00000E-02;&'                CONTINUE  ''                   / Source extraction (ds9) region used            BACK_REG= 'ICRS;annulus 80.894170000 -69.756110000 2.00000E-02 4.00000E-02;&'   CONTINUE  ''                   / Background extraction (ds9) region used        END     
+# ----------------------------------------------------------------------
+from astroML.plotting import setup_text_plots
+setup_text_plots(fontsize=8, usetex=True)
 
-# Load the FITS table
-hdul = fits.open('/home/jortecal/GitHub/eRosita/Test/Files_srctool/LMC/srctoolout_020_ARF_00001.fits')
-data = hdul[1].data
-# print header  
-print(data.columns)
-# Plot the spectrum contained in the FITS table
-fig = plt.figure(figsize=(10, 10))
+# ------------------------------------------------------------
+# Load the FITS file
+fits_file = '/home/jortecal/GitHub/eRosita/SKYMAPS_052022_MPE.fits'
+hdul = fits.open(fits_file)
+
+print("FITS file structure:")
+hdul.info()
+
+# The actual data is in extension 1 (SMAPS table)
+smaps = hdul[1].data
+print(f"\n✓ Found binary table 'SMAPS' with {len(smaps)} rows and {len(smaps.columns)} columns")
+
+# Use Equatorial coordinates (matches the starmap image)
+coord_system = 'Equatorial (J2000)'
+
+print(f"\n{'='*60}")
+print(f"Using {coord_system} coordinates")
+print(f"Fields: {len(smaps)}")
+print(f"{'='*60}")
+
+# Load background image (equirectangular projection, celestial coordinates)
+background_image = plt.imread('/home/jortecal/GitHub/eRosita/starmap_2020_4k_print.jpg')
+
+# Create figure with 2:1 aspect ratio (standard for equirectangular)
+fig = plt.figure(figsize=(20, 10))
+
+# Create axes WITHOUT projection (equirectangular is just a rectangular plot)
 ax = fig.add_subplot(111)
-ax.grid(True)
-ax.set_xlabel('CHANNEL', fontsize=20)
-ax.set_ylabel('Counts', fontsize=20)
-ax.set_title('LMC', fontsize=20)
-ax.tick_params(axis='both', which='major', labelsize=20)
-ax.tick_params(axis='both', which='minor', labelsize=20)
 
-# plot the spectrum with a scatter plot
-ax.scatter(data['CHANNEL'], data['COUNTS'], color='black', s=10)
+# Display background image
+# Equirectangular: RA from 0° to 360° (x-axis), Dec from -90° to 90° (y-axis)
+ax.imshow(background_image, extent=[0, 360, -90, 90], aspect='auto', origin='upper')
 
+# Draw sky tiles as rectangles
+print("\nDrawing sky tiles...")
+tiles_drawn = 0
+tiles_skipped = 0
 
+for i, row in enumerate(smaps):
+    # Get RA/DEC boundaries directly
+    ra_min = row['RA_MIN']
+    ra_max = row['RA_MAX']
+    dec_min = row['DE_MIN']
+    dec_max = row['DE_MAX']
+    
+    # Skip invalid data
+    if not (np.isfinite(ra_min) and np.isfinite(ra_max) and 
+            np.isfinite(dec_min) and np.isfinite(dec_max)):
+        tiles_skipped += 1
+        continue
+    
+    # Don't skip polar regions anymore - just handle RA wrapping
+    
+    # Handle RA wrapping at 0°/360° boundary
+    if ra_max - ra_min > 180:
+        # Tile crosses the boundary - draw in two parts
+        # Part 1: from ra_min to 360°
+        rect1 = patches.Rectangle(
+            (ra_min, dec_min), 360 - ra_min, dec_max - dec_min,
+            linewidth=0.3, edgecolor='cyan', facecolor='none',
+            alpha=0.6
+        )
+        ax.add_patch(rect1)
+        
+        # Part 2: from 0° to ra_max
+        rect2 = patches.Rectangle(
+            (0, dec_min), ra_max, dec_max - dec_min,
+            linewidth=0.3, edgecolor='cyan', facecolor='none',
+            alpha=0.6
+        )
+        ax.add_patch(rect2)
+        tiles_drawn += 1
+    else:
+        # Normal tile (doesn't cross boundary)
+        width = ra_max - ra_min
+        height = dec_max - dec_min
+        
+        rect = patches.Rectangle(
+            (ra_min, dec_min), width, height,
+            linewidth=0.3, edgecolor='cyan', facecolor='none',
+            alpha=0.6
+        )
+        ax.add_patch(rect)
+        tiles_drawn += 1
+
+print(f"✓ Drew {tiles_drawn} sky tiles")
+print(f"✗ Skipped {tiles_skipped} tiles (invalid data)")
+
+# Configure axes
+ax.set_xlim(0, 360)
+ax.set_ylim(-90, 90)
+
+# Set up tick marks
+ax.set_xticks(np.arange(0, 361, 30))
+ax.set_xticks(np.arange(0, 361, 15), minor=True)
+ax.set_yticks(np.arange(-90, 91, 30))
+ax.set_yticks(np.arange(-90, 91, 15), minor=True)
+
+# Format labels
+ax.set_xlabel('Right Ascension (degrees)', fontsize=16, color='white')
+ax.set_ylabel('Declination (degrees)', fontsize=16, color='white')
+
+# Style the plot
+ax.tick_params(axis='both', which='major', labelsize=14, colors='white', length=6, width=1.5)
+ax.tick_params(axis='both', which='minor', labelsize=10, colors='white', length=3, width=1)
+ax.grid(True, which='minor', alpha=0.1, color='white', linewidth=0.3, linestyle=':')
+ax.grid(True, which='major', alpha=0.3, color='white', linewidth=0.8, linestyle='-')
+
+# Set background color
+ax.set_facecolor('black')
+fig.patch.set_facecolor('black')
+
+# Add title
+title = f'eROSITA Sky Tiles ({coord_system})'
+ax.set_title(title, fontsize=22, pad=20, color='white', weight='bold')
+
+# Add text annotation
+ax.text(0.02, 0.98, f'{tiles_drawn} sky tiles\n({tiles_skipped} skipped)', 
+        transform=ax.transAxes, fontsize=12, va='top', ha='left',
+        bbox=dict(boxstyle='round', facecolor='black', alpha=0.7, edgecolor='cyan'),
+        color='white')
+
+# Add coordinate system label (consistent terminology)
+ax.text(0.98, 0.02, coord_system, 
+        transform=ax.transAxes, fontsize=11, va='bottom', ha='right',
+        bbox=dict(boxstyle='round', facecolor='black', alpha=0.7, edgecolor='cyan'),
+        color='white')
+
+plt.tight_layout()
+plt.savefig('/home/jortecal/GitHub/eRosita/eRosita_skymap_equatorial.png', dpi=200, bbox_inches='tight', facecolor='black')
+print(f"\n✓ Saved: /home/jortecal/GitHub/eRosita/eRosita_skymap_equatorial.png")
 plt.show()
 
-
+hdul.close()
